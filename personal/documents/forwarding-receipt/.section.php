@@ -1,0 +1,3 @@
+<?
+$sSectionName = "Экспедиторская расписка";
+$arDirProperties = [];

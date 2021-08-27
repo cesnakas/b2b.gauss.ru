@@ -1,0 +1,81 @@
+@import "../variables.css";
+
+.btn {
+
+  &--grey {
+
+    &:hover:not(:disabled) {
+      background-color: var(--orange-l);
+    }
+    &:active:not(:disabled) {
+      background-color: var(--orange-l);
+    }
+  }
+
+  &--transparent {
+
+    &:hover:not(:disabled, .main-product__arrow) {
+      border-color: var(--orange-l);
+      background-color: var(--orange-l);
+
+      .tooltip svg * {
+        fill: var(--black-text) !important;
+      }
+    }
+  }
+
+  &--transparent-l {
+
+    &:hover:not(:disabled, .main-product__arrow) {
+      border-color: var(--orange-l);
+      background-color: var(--orange-l);
+    }
+  }
+
+  &--loading {
+
+    &:hover {
+      border-color: var(--grey);
+      background-color: var(--grey);
+    }
+
+    &:active {
+      border-color: var(--grey-1);
+      background-color: var(--grey-1);
+    }
+
+    &.active {
+
+      svg {
+        animation: rotating 4s linear infinite;
+      }
+    }
+  }
+
+  &--download {
+
+    &:hover:not(:disabled) {
+      background-color: var(--orange-l);
+    }
+    &:active:not(:disabled) {
+      background-color: var(--orange);
+    }
+  }
+
+  &--orange {
+
+    &:hover {
+      background-color: var(--orange-l);
+      border-color: var(--orange-l);
+    }
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

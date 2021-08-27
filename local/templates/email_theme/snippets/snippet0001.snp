@@ -1,0 +1,48 @@
+<table  width="100%" style="padding: 0px;padding-left:40px;padding-right: 40px;">
+    <tbody>
+    <tr>
+        <td style="padding:0;padding-top: 30px;padding-bottom: 30px;font-size: 20px;">Здравствуйте, #NAME#!</td>
+    </tr>
+    <tr>
+        <td style="padding:0;font-weight: 400;padding-bottom: 30px;">
+            Строка1
+        </td>
+    </tr>
+    <tr>
+        <td style="padding:0;font-weight: 400;padding-bottom: 30px;">
+            Строка2
+        </td>
+    </tr>
+    <tr>
+        <td style="padding:0;font-weight: 600;padding-bottom: 8px;">Подзаголовок:</td>
+    </tr>
+    <tr>
+        <td style="padding:0;font-weight: 600;padding-bottom: 30px;">
+            <a href="http://#SERVER_NAME#" style="padding: 10px 20px;background-color: #ec0001;color: #fff;font-size: 16px;border-radius: 4px;font-weight: 500;text-decoration:none;">
+                Текст кнопки
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<table  width="100%" style="padding: 0px;padding-left:40px;padding-bottom: 40px">
+    <tbody>
+        <tr>
+            <td colspan="2" style="padding:0;padding-bottom: 15px;font-size: 16px;">Подзаголовок:</td>
+        </tr>
+        <tr>
+            <td style="width: 250px; padding:0;font-weight: 600;padding-bottom: 15px;">Название1:</td>
+            <td style="padding:0;padding-bottom: 15px;">#Значение1#</td>
+        </tr>
+        <tr>
+            <td style="width: 250px; padding:0;font-weight: 600;padding-bottom: 15px;">Название2:</td>
+            <td style="padding:0;padding-bottom: 15px;">#Значение2#</td>
+        </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="2" style="padding: 0; padding-top: 15px;">В случае возникновения вопросов рекомендуем ознакомиться с наиболее популярными вопросами и ответами на них в разделе <a href="http://#SERVER_NAME#/faq/" style="color: #002454;">FAQ</a></td>
+    </tr>
+    </tfoot>
+</table>

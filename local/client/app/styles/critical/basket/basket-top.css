@@ -1,0 +1,112 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+.basket-top { /* блок очищения, сохраниния коризны */
+  display: flex;
+  margin-bottom: 38px;
+  align-items: flex-end;
+
+  @media (--max1023) {
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  @media (--max767) {
+    margin-bottom: 15px;
+  }
+
+  &__company {
+    margin-right: auto;
+
+    @media (--max1023) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    & > span {
+      display: block;
+      margin-bottom: 11px;
+    }
+
+    .select-wrapper {
+      width: 350px;
+
+      @media (--max1279) {
+        width: 300px;
+      }
+      @media (--max767) {
+        width: 100%;
+      }
+    }
+
+    .b-form__item {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    line-height: 1;
+    font-weight: 500;
+    transition: color .2s, background .2s, border-color .2s;
+
+    @media (--max1279) {
+      padding: 15px 10px;
+    }
+    @media (--max1023) {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+    @media (--max767) {
+      width: calc(50% - 5px);
+      justify-content: space-between;
+    }
+    @media (--mobile) {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &--download {
+
+      @media (--max767) {
+        margin-right: 0;
+      }
+      @media (--mobile) {
+        margin-top: 10px;
+      }
+    }
+
+    & > svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+    }
+
+    & > span { /* текст */
+      margin-right: 11px;
+    }
+  }
+
+  &__clear {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    margin-left: 10px;
+    font-weight: 500;
+
+    @media (--max1023) {
+      margin-left: auto;
+    }
+
+    .plus {
+
+      &:before,
+      &:after {
+        background-color: var(--black-text);
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+
+.lk-return {
+
+  &__form {
+    display: none;
+  }
+  .link-more {
+    display: none;
+  }
+  .b-checkbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

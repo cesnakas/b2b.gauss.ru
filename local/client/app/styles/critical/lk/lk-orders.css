@@ -1,0 +1,219 @@
+@import "../../variables.css";
+@import "../../media.css";
+@import "../../helpers.css";
+
+:root {
+  --select-w-d: 350px;
+  --select-w-n: 250px;
+  --select-w-t: 200px;
+  --select-mr-d: 10px;
+  
+  --search-btn-width-d: 60px;
+  --search-btn-width-t: 50px;
+  
+  --item-padding-v-d: 25px;
+  --item-padding-v-t: 15px;
+}
+
+.lk-orders {
+  
+  & &__top { /* &.b-form */
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 20px;
+    
+    @media (--max767) {
+      flex-wrap: wrap;
+    }
+
+    &--company {
+      justify-content: flex-end;
+
+      .b-form__item--select {
+
+        @media (--max767) {
+          max-width: 100% !important;
+          margin-right: 0 !important;
+        }
+      }
+    }
+    
+    select,
+    .b-form__item--select {
+      max-width: var(--select-w-d);
+      margin-right: var(--select-mr-d);
+      margin-bottom: 0;
+      
+      @media (--max1700) {
+        max-width: var(--select-w-n);
+      }
+      @media (--max1023) {
+        max-width: var(--select-w-t);
+      }
+      @media (--max767) {
+        max-width: calc(50% - calc(var(--select-mr-d) / 2));
+        margin-bottom: 10px;
+      }
+      @media (--mobile) {
+        max-width: 100%;
+        margin-right: 0;
+      }
+      
+      &:nth-child(2) {
+        
+        @media (--max767) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  
+  &__search {
+    width: calc(100% - 20px - 700px); /* calc(var(--select-mr-d) * 2) - calc(var(--select-w-d) * 2) */
+    background-color: #fff;
+    height: 50px;
+    
+    @extend .search;
+  
+    @media (--max1700) {
+      width: calc(100% - 20px - 500px); /* calc(var(--select-mr-d) * 2) - calc(var(--select-w-d) * 2) */
+    }
+    @media (--max1023) {
+      width: calc(100% - 20px - 400px); /* calc(var(--select-mr-d) * 2) - calc(var(--select-w-d) * 2) */
+    }
+    @media (--max767) {
+      width: 100%;
+    }
+
+    .b-form__item {
+
+      &.error {
+        border-color: var(--red);
+      }
+
+      .b-form__label {
+        top: 50% !important;
+
+        &.active {
+          top: 3px !important;
+        }
+      }
+      input {
+        height: 50px;
+      }
+    }
+  }
+  
+  /* item */
+  &-i {
+    
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &__header {
+      padding: 20px var(--item-padding-v-d) 15px;
+      background-color: var(--grey-2);
+      border: 1px solid var(--grey-1);
+      
+      @media (--max1023) {
+        padding: 10px var(--item-padding-v-t);
+      }
+      
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        
+        @media (--max767) {
+          display: block;
+        }
+        
+        /* Заказ выполнен 30.03.2018 */
+        & > div:last-child:not(:first-child) {
+          white-space: nowrap;
+        }
+      }
+    }
+    
+    &__from { /* "Заказ инициирован менеджером" */
+      margin-top: 6px;
+      color: var(--black-3);
+    }
+    
+    &__content {
+      padding: 20px var(--item-padding-v-d);
+      border: 1px solid var(--grey-1);
+      border-top: none;
+      
+      @media (--max1023) {
+        padding: 20px var(--item-padding-v-t);
+      }
+    }
+
+    &__detail {
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
+    
+    &__bottom { /* в .lk-orders-i__content */
+      display: flex;
+      
+      @media (--mobile) {
+        flex-wrap: wrap;
+      }
+    }
+    
+    &__info {
+      
+      span {
+        color: var(--green);
+      }
+    }
+    
+    &__title {
+      margin-bottom: 16px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    
+    &__repeat { /* &.link-underline */
+      margin-left: auto;
+      
+      @media (--mobile) {
+        margin: 5px 0 5px auto;
+      }
+    }
+    
+    &__cancel { /* &.link-underline */
+      margin-left: 50px;
+      
+      @media (--max767) {
+        margin-left: 15px;
+      }
+      @media (--mobile) {
+        width: 100%;
+        justify-content: flex-end;
+        //text-align: right;
+      }
+    }
+    
+    &__status {
+      display: flex;
+      margin-bottom: 3px;
+      justify-content: space-between;
+      
+      @media (--max767) {
+        display: block;
+      }
+    }
+    
+    .title-3 {
+      margin-bottom: 0;
+    }
+    .btn {
+      margin-bottom: 20px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+<img src="/local/client/img/f_form.jpg" alt="">

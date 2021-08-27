@@ -1,0 +1,12 @@
+.p-slider {
+
+  .swiper {
+
+    &-slide {
+
+      &:hover {
+        z-index: 1;
+      }
+    }
+  }
+}

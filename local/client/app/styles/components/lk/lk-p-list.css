@@ -1,0 +1,14 @@
+@import "../../variables.css";
+
+.lk-p-list {
+
+  &__look {
+
+    &:hover {
+
+      svg * {
+        fill: var(--orange-l);
+      }
+    }
+  }
+}

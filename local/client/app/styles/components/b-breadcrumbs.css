@@ -1,0 +1,11 @@
+@import "../variables.css";
+
+.b-breadcrumbs {
+
+  &__link {
+
+    &:hover {
+      color: var(--orange-l);
+    }
+  }
+}

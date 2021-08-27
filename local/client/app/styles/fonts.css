@@ -1,0 +1,15 @@
+
+@font-face {
+  font-family: "EtelkaPro";
+  font-display: fallback;
+  src: local("EtelkaLightPro"),
+       url('/local/client/app/fonts/EtelkaLightPro.woff') format('woff');
+  font-weight: 300;
+}
+@font-face {
+  font-family: "EtelkaPro";
+  font-display: fallback;
+  src: local("EtelkaMediumPro"),
+       url('/local/client/app/fonts/EtelkaMediumPro.woff') format('woff');
+  font-weight: 500;
+}

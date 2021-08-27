@@ -1,0 +1,99 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+:root {
+  --padding-v-d: 25px;
+  --padding-v-t: 15px;
+}
+
+.lk-carts {
+
+  &__item {
+    background-color: #fff;
+    
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 17px calc(var(--padding-v-d) - 10px) 14px var(--padding-v-d);
+    
+    @media (--max767) {
+      flex-wrap: wrap;
+      padding: 10px calc(var(--padding-v-t) - 10px) 10px var(--padding-v-t);
+    }
+    
+    & > * {
+      margin-right: 10px;
+      margin-bottom: 5px;
+    }
+    
+    &--bg {
+      justify-content: space-between;
+      background-color: var(--grey);
+      font-size: 16px;
+      
+      @media (--max767) {
+        flex-wrap: wrap;
+      }
+    }
+    
+    .link-toggle {
+      margin-left: auto;
+      margin-top: 0;
+      margin-right: 0 !important;
+    }
+    .btn {
+      min-height: 48px;
+      padding: 13px 30px !important;
+    }
+    .btn,
+    .lk-carts__del {
+      font-weight: 500;
+    }
+  }
+  
+  &__content {
+    padding: 15px var(--padding-v-d);
+    border-top: 1px solid var(--grey-1);
+    
+    @media (--max767) {
+      padding: 10px var(--padding-v-t);
+    }
+  }
+  
+  /* "Удалить" */
+  &__del {
+    margin-left: 12px;
+    font-weight: 500;
+
+    span {
+      padding-right: 7px;
+    }
+  }
+  
+  .btn {
+    
+    @media (--max767) {
+      width: calc(50% - 10px);
+    }
+    @media (--mobile) {
+      width: calc(100% - 10px);
+    }
+  }
+  
+  .basket-item {
+    
+    &:last-child {
+      margin-bottom: 0;
+      //padding-bottom: 0;
+      
+      @media (--max767) {
+        border-bottom: none;
+      }
+    }
+  }
+}

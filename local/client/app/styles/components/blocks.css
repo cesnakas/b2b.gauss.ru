@@ -1,0 +1,36 @@
+@import "../variables.css";
+
+.blocks {
+
+  &__news {
+
+    &:hover{
+      background-color: var(--blue-sale);
+    }
+  }
+
+  &__img {
+
+    &--video {
+
+      &:hover {
+
+        &:before {
+          opacity: .4;
+        }
+
+        .ed-play * {
+          fill: var(--orange-l);
+        }
+      }
+    }
+  }
+
+  &__tag {
+
+    &:hover {
+      border-color: var(--orange-l);
+      background-color: var(--orange-l);
+    }
+  }
+}

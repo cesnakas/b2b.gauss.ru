@@ -1,0 +1,49 @@
+@import "../../media.css";
+@import "../../variables.css";
+
+.cookie-alert {
+  margin: 0;
+  padding: 5px 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  z-index: 19 !important;
+  background-color: #fff;
+  transform: translateZ(0);
+
+  @media (--max767) {
+    padding: 10px 35px 10px 15px;
+    text-align: left;
+  }
+
+  .plus--cross {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    margin: auto;
+
+    @media (--max767) {
+      right: 5px;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: var(--grey-1);
+  }
+  
+  &:not(.hidden) {
+    display: flex;
+    justify-content: center;
+  }
+}

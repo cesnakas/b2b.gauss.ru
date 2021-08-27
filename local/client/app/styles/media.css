@@ -1,0 +1,9 @@
+@custom-media --max1700 (max-width: 1700px);
+@custom-media --max1500 (max-width: 1500px);
+@custom-media --max1365 (max-width: 1365px);
+@custom-media --max1279 (max-width: 1279px);
+@custom-media --min1024 (min-width: 1024px);
+@custom-media --max1023 (max-width: 1023px);
+@custom-media --min768 (min-width: 768px);  /* только на странице "О компании" */
+@custom-media --max767 (max-width: 767px);
+@custom-media --mobile (max-width: 500px);

@@ -1,0 +1,11 @@
+@import "../variables.css";
+
+.news {
+
+  &__item {
+
+    &:hover {
+      background-color: var(--blue-sale);
+    }
+  }
+}

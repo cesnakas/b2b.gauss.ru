@@ -1,0 +1,99 @@
+@import "../media.css";
+@import "../variables.css";
+
+.slider {
+  position: relative;
+
+  &__paginations {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    justify-content: center;
+    z-index: 2;
+   @media(--max1279) {
+     display: flex;
+   }
+
+    span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--grey-2);
+      transition: background-color .2s;
+      cursor: pointer;
+
+      &.active {
+        background-color: var(--orange-l);
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    right: -45px;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    @media (--max1700) {
+      left: -50px;
+      right: -50px;
+    }
+    @media (--max1279) {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    width: 40px;
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    cursor: pointer;
+    pointer-events: all;
+
+    &:hover {
+
+      svg {
+        * {
+          stroke: var(--orange-l);
+        }
+      }
+    }
+
+    &--prev {
+      transform: scaleX(-1);
+    }
+
+    &--next {
+
+    }
+
+    &.swiper-button-disabled {
+      cursor: default;
+
+      svg {
+
+        * {
+          stroke: var(--c-section-bg);
+        }
+      }
+    }
+
+    svg {
+      width: 9px;
+      height: 16px;
+    }
+  }
+}

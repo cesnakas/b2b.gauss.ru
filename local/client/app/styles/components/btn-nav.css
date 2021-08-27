@@ -1,0 +1,27 @@
+.btn-nav {
+
+  &.active {
+    transform: rotateY(180deg) translateZ(0);
+
+    .btn-nav__line {
+      width: 15px;
+      background-color: transparent !important;
+      transition: none;
+
+      &:before,
+      &:after {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      &:before {
+        transform: rotate(-45deg) translateZ(0);
+      }
+
+      &:after {
+        transform: rotate(45deg) translateZ(0);
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import "../media.css";
+@import "../variables.css";
+
+:root {
+  --param-big: 12px;
+  --param-small: 2px;
+  
+  --btn-size-d: 40px;
+}
+
+.b-count {
+  display: flex;
+  //max-width: 50%;
+  margin-left: auto;
+  align-items: center;
+  //height: 100%;
+  background-color: var(--grey);
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  &__btn {
+    display: inline-block;
+    min-width: var(--btn-size-d);
+    height: var(--btn-size-d);
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: background-color .2s;
+    
+    &:before,
+    &--plus:after {
+      background-color: var(--black-1);
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 0;
+      right: 0;
+    }
+    
+    &:before {
+      width: var(--param-big);
+      height: var(--param-small);
+    }
+    
+    &--plus {
+    
+      &:after {
+        height: var(--param-big);
+        width: var(--param-small);
+      }
+    }
+  }
+  
+  &__input {
+    width: calc(100% - (var(--btn-size-d) * 2));
+    min-height: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+    border: 0;
+    font-weight: 300;
+    text-align: center;
+    
+    @media (--max1023) {
+      font-size: 16px;
+    }
+  }
+}
+
+.no-hover {
+  pointer-events: none;
+}

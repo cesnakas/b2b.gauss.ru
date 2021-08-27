@@ -1,0 +1,3 @@
+<?
+$sSectionName = "Сохраненные корзины";
+$arDirProperties = [];

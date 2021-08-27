@@ -1,0 +1,90 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+/* catalog navigation */
+.c-nav {
+  margin-bottom: 20px;
+  padding: 30px 30px 15px;
+  background-color: #fff;
+  
+  @media (--max1279) {
+    padding: 20px 20px 15px;
+  }
+  @media (--max1023) {
+    display: none;
+  }
+  
+  & > div  {
+    
+    & > a, /* первый уровень */
+    & > [data-toggle-list] > [data-toggle-wrap] > a { /*заголовок вложенного списка*/
+      margin-bottom: 15px;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      
+      span:first-child {
+        padding-right: 10px;
+      }
+    }
+    
+    & > div > a, /* второй уровень */
+    & > [data-toggle-list] > [data-toggle-wrap] > [data-toggle-list] > a { /*третий уровень*/
+      margin-bottom: 9px;
+      color: var(--black-3);
+  
+      &.active,
+      &:hover {
+        color: var(--orange-l);
+      }
+    }
+  }
+  
+  [data-toggle-list] { /* вложенные уровни */
+    display: none;
+    padding-bottom: 17px;
+
+    &.active { /* переключается на js, .active для инициализации */
+      display: block;
+    }
+
+    > [data-toggle-wrap] {
+      padding-left: 10px;
+    }
+  }
+  
+  [data-toggle-btn] { /* обертка иконки */
+    margin: -5px;
+    padding: 5px;
+  
+    &.active {
+      
+      &:after {
+        transform: rotate(-135deg) translateZ(0);
+      }
+    }
+    
+    &:after { /* иконка */
+      content: '';
+      display: block;
+      min-width: 6px;
+      height: 6px;
+      margin-right: 2px;
+      border: 2px solid;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg) translateZ(0);
+      transition: transform .2s;
+    }
+  }
+  
+  a { /* все ссылки на всех уровнях */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  span { /* текст */
+    transition: color .2s;
+  }
+}

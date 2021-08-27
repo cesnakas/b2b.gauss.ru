@@ -1,0 +1,12 @@
+@import "../../variables.css";
+
+.main-slider {
+  &__small {
+    .title-2 {
+
+      &:hover {
+        color: var(--blue);
+      }
+    }
+  }
+}

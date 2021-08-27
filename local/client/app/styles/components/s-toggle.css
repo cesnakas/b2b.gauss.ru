@@ -1,0 +1,16 @@
+@import "../variables.css";
+
+.s-toggle {
+
+  &__title {
+
+    &:hover {
+      color: var(--orange-l);
+
+      &:before,
+      &:after {
+        background-color: var(--orange-l);
+      }
+    }
+  }
+}

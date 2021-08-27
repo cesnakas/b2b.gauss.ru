@@ -1,0 +1,3 @@
+<?
+$sSectionName = "Обучающий центр";
+$arDirProperties = [];

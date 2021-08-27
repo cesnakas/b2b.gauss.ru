@@ -1,0 +1,3 @@
+<?
+$sSectionName = "План-факт";
+$arDirProperties = [];

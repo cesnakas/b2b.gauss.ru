@@ -1,0 +1,61 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+.h {
+
+  &__top {
+
+    a:not(.btn):hover {
+      color: var(--orange-l);
+    }
+  }
+
+  &__cart {
+
+    &:hover {
+
+      svg {
+
+        *:not(g) {
+          stroke: var(--orange-l);
+        }
+      }
+    }
+  }
+
+  &__nav {
+
+    a {
+      position: relative;
+
+      &:hover {
+        color: var(--orange-l);
+      }
+
+      .new {
+        color: #5bceff;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'EtelkaMediumPro', 'Arial';
+        text-transform: uppercase;
+        position: absolute;
+        top: -10px;
+        left: -8px;
+        @media (--max1700) {
+          line-height: 14px;
+          background: white;
+        }
+      }
+    }
+  }
+
+  &-user {
+
+    &__logout {
+
+      &:hover svg *:not(g) {
+        fill: var(--orange-l);
+      }
+    }
+  }
+}

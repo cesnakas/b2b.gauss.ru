@@ -1,0 +1,101 @@
+@import "../media.css";
+@import "../variables.css";
+
+:root {
+  --padding-v-d: 40px;
+  --padding-v-1023: 30px;
+  --padding-v-m: 15px;
+}
+
+.static {
+
+  &-section { /* центрированный блок деталки */
+    max-width: 960px;
+    margin: 0 auto var(--section-mb-d);
+    background-color: #fff;
+
+    &__date {
+      margin-bottom: 30px;
+    }
+
+    &__img {
+      display: flex;
+
+      img {
+
+        &:not(.init) {
+          width: 100%;
+          height: 400px;
+        }
+      }
+    }
+
+    .title {
+      margin-bottom: 10px;
+    }
+  }
+
+  &-content {
+    padding: 35px var(--padding-v-d) 30px;
+    background-color: #fff;
+
+    @media (--max1023) {
+      padding: 25px var(--padding-v-1023);
+    }
+
+    @media (--max767) {
+      padding: 20px var(--padding-v-m);
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    &--mb {
+      margin-bottom: 40px;
+
+      @media (--max1023) {
+        margin-bottom: 30px;
+      }
+
+      @media (--mobile) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .b-tabs:after {
+      content: '';
+      display: none;
+      background: linear-gradient(to right, transparent, #fff);
+      width: 30px;
+      height: 29px;
+      right: -15px;
+      top: 0;
+      position: absolute;
+      pointer-events: none;
+
+      @media (--max1023) {
+        display: block;
+      }
+    }
+  }
+  &-flex-wrap {
+    .b-tabs {
+      &-head {
+        flex-wrap: wrap;
+
+        @media(--max1023) {
+          flex-wrap: nowrap;
+        }
+      }
+      &-link {
+        margin-bottom: 10px;
+        @media(--max1023) {
+          margin-bottom: 0;
+        }
+      }
+
+
+    }
+  }
+}

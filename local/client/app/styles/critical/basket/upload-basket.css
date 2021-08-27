@@ -1,0 +1,9 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+#upload-basket .basket-item .basket-item__article {
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
+  padding-right: 10px;
+}

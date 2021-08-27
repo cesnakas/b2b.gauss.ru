@@ -1,0 +1,55 @@
+@import "../variables.css";
+
+.ed {
+
+  &-presentation {
+
+    &:hover {
+
+      .ed-play * {
+        fill: var(--orange-l);
+      }
+    }
+
+    &__title {
+
+      &:hover {
+        color: var(--orange-l);
+      }
+    }
+  }
+
+  &-play {
+
+    &:hover {
+      border-color: var(--orange-l);
+    }
+  }
+
+  &-tests {
+
+    &__item {
+
+      &:hover {
+        color: var(--orange);
+
+        svg * {
+          stroke: var(--orange-l);
+        }
+      }
+    }
+  }
+
+  &-media {
+
+    &__content {
+
+      &:hover {
+
+        .ed-play * {
+          fill: var(--orange-l);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../media.css";
+@import "../variables.css";
+
+.aside {
+  display: flex;
+  width: 100%;
+  
+  @media (--max1023) {
+    display: block;
+  }
+  
+  &__sidebar {
+    width: var(--aside-sidebar-width-d);
+    
+    @media (--max1279) {
+      width: var(--aside-sidebar-width-t);
+    }
+    @media (--max1023) {
+    
+    }
+  }
+  
+  &__main {
+    width: calc(100% - var(--aside-sidebar-width-d) - var(--aside-main-ml-d));
+    margin-left: var(--aside-main-ml-d);
+    
+    @media (--max1700) {
+      width: calc(100% - var(--aside-sidebar-width-d) - var(--aside-main-ml-t));
+      margin-left: var(--aside-main-ml-t);
+    }
+    @media (--max1279) {
+      width: calc(100% - var(--aside-sidebar-width-t) - var(--aside-main-ml-t));
+    }
+    @media (--max1023) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

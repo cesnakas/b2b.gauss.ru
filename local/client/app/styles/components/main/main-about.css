@@ -1,0 +1,127 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+:root {
+}
+
+.main-about {
+  display: flex;
+  height: 535px;
+  margin-bottom: var(--section-mb-d);
+  background-color: var(--black);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  
+  @media (--max1023) {
+    height: auto;
+  }
+  @media (--max767) {
+    margin-bottom: var(--section-mb-t);
+  }
+  
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 50px 90px;
+    position: relative;
+    z-index: 3;
+  
+    @media (--max1023) {
+      padding: 40px 30px;
+    }
+    @media (--mobile) {
+      padding: 30px 15px 20px;
+    }
+    
+    .title-1 {
+      margin-bottom: 62px;
+      
+      @media (--max1023) {
+        margin-bottom: 30px;
+      }
+    }
+    .btn {
+      margin-top: auto;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+  
+  &__items {
+    display: flex;
+    
+    @media (--mobile) {
+      display: block;
+    }
+  }
+  &__item {
+    margin-bottom: 20px;
+    font-size: 16px;
+
+    &:nth-child(1) {
+      animation-delay: .6s;
+    }
+    &:nth-child(2) {
+      animation-delay: .3s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0s;
+    }
+    
+    &:not(:last-child) {
+      margin-right: 115px;
+      
+      @media (--max1023) {
+        margin-right: 30px;
+      }
+      @media (--mobile) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+    
+    &:before {
+      display: block;
+      content: '';
+      width: 30px;
+      height: 2px;
+      margin-bottom: 15px;
+      background-color: #fff;
+    }
+  }
+  
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: right;
+    z-index: 1;
+    
+    @media (--mobile) {
+      display: none;
+    }
+  
+    &:after {
+      content: '';
+      width: 586px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(to right, #000000, transparent); /* var(--black) */
+      z-index: 2;
+      
+      @media (--max1700) {
+        width: 100%;
+      }
+    }
+    
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../media.css";
+@import "../../variables.css";
+@import "../../helpers.css";
+
+:root {
+  --slide-width-m: 270px;
+  --slide-margin-m: 10px;
+}
+
+
+/* слайдера c продукт карточками */
+.p-slider {
+  margin-bottom: var(--section-mb-d);
+  
+  @media (--max767) {
+    margin: 0 -15px var(--section-mb-t) !important;
+  }
+  
+  &--mb {
+    margin-bottom: 118px;
+    
+    @media (--max1279) {
+      margin-bottom: var(--section-mb-d);
+    }
+  }
+  
+  .swiper {
+    
+    &-slide {
+
+      @extend .slide-pseudo-padding;
+
+      &:nth-of-type(1) {
+        animation-delay: 0s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: .2s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .4s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: .6s;
+      }
+      &:nth-of-type(5) {
+        animation-delay: .8s;
+      }
+    }
+    
+    &-container {
+      margin: -35px 0;
+      padding: 35px 0;
+      //margin: -20px 0;
+      //padding: 20px 0;
+    }
+  }
+}

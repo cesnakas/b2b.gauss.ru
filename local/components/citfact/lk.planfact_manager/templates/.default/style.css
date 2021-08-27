@@ -1,0 +1,11 @@
+#plan_for_year:disabled {
+    color: #000;
+}
+
+.plan_for_year .b-form__label.disabled {
+    color: #949ba8;
+}
+
+.label {
+    color: black;
+}

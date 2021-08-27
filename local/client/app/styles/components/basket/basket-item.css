@@ -1,0 +1,21 @@
+@import "../../variables.css";
+
+.basket-item {
+  &__description {
+    a {
+      &:hover {
+        color: var(--orange-l);
+      }
+    }
+  }
+  &__actions {
+    &:hover {
+      .plus {
+        &:before,
+        &:after {
+          background-color: var(--orange-l);
+        }
+      }
+    }
+  }
+}

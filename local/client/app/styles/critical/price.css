@@ -1,0 +1,42 @@
+@import "../variables.css";
+@import "../media.css";
+
+.price {
+  display: flex;
+  align-items: center;
+  
+  &__current {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    
+    &--sale {
+      font-size: 15px;
+      color: var(--red);
+    }
+  }
+  
+  &__old {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--h-search-placeholder);
+    position: relative;
+    white-space: nowrap;
+  
+    &:after {
+      content: '';
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      right: -5px;
+      left: -5px;
+      background-color: var(--h-search-placeholder);
+
+      @media (--max767) {
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+}

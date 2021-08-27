@@ -1,0 +1,368 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+:root {
+  --sidebar-width-d: 430px;
+  --sidebar-width-n: 300px;
+  --sidebar-ml-d: 20px;
+
+  --inputs-width-d: 400px;
+}
+
+.order {
+  display: flex;
+
+  @media (--max1023) {
+    flex-wrap: wrap;
+  }
+
+  &__main {
+    width: calc(100% - var(--sidebar-ml-d) - var(--sidebar-width-d));
+    padding: 26px 40px 40px;
+    background-color: #fff;
+
+    @media (--max1700) {
+      width: calc(100% - var(--sidebar-ml-d) - var(--sidebar-width-n));
+    }
+    @media (--max1279) {
+      padding: 20px 20px;
+    }
+    @media (--max1023) {
+      width: 100%;
+    }
+    @media (--max767) {
+      padding: 20px 15px;
+    }
+
+    .title-2 {
+      margin-top: 25px;
+
+      @media (--max767) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__sidebar {
+    width: var(--sidebar-width-d);
+    margin-left: var(--sidebar-ml-d);
+
+    @media (--max1700) {
+      width: var(--sidebar-width-n);
+    }
+    @media (--max1023) {
+      width: 100%;
+      margin-top: 15px;
+      margin-left: 0;
+    }
+
+    &--m {
+      display: none;
+
+      @media (--max1023) {
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__delivery { /* обертка радио кнопок */
+    display: flex;
+    margin-bottom: 27px;
+    align-items: flex-start;
+
+    @media (--max767) {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .b-checkbox {
+      margin-right: 0;
+
+      @media (--max767) {
+        width: 100%;
+      }
+
+      &:not(:last-child) {
+        margin-right: 20px;
+
+        @media (--max767) {
+          margin-right: 0;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 37px;
+    font-size: 16px;
+
+    @media (--max767) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    padding-bottom: 26px;
+    border-bottom: 1px solid var(--grey-1);
+
+    @media (--max767) {
+      flex-wrap: wrap;
+      padding-bottom: 0;
+    }
+
+    span {
+      display: block;
+      font-size: 16px;
+
+      @media (--max767) {
+        padding-bottom: 15px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 40px;
+
+        @media (--max1023) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  &-total {
+    padding: 29px 28px;
+    background-color: #fff;
+
+    @media (--max1279) {
+      padding: 20px 20px;
+    }
+    @media (--max767) {
+      padding: 20px 15px;
+    }
+
+    &__item {
+      display: flex;
+      margin-bottom: 10px;
+      justify-content: space-between;
+
+      &--r {
+        padding-right: 10px;
+      }
+
+      &--sum {
+        margin-top: 16px;
+        margin-bottom: 27px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+
+    .basket-total__sum {
+      justify-content: space-between;
+      padding-right: 10px;
+    }
+
+    &__pp {
+      font-size: 12px;
+      color: var(--black-3);
+
+      a {
+        color: var(--black);
+        text-decoration: underline;
+        transition: text-decoration .2s;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      height: 50px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    width: 840px;
+    max-width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (--max767) {
+      display: block;
+      width: 100%;
+    }
+
+    &--additional {
+      align-items: flex-start;
+      margin-top: -5px;
+    }
+
+    & > span {
+
+      @media (--max767) {
+        display: block;
+        padding: 5px;
+      }
+    }
+
+    &-after-label {
+      margin-top: 0;
+    }
+  }
+
+  &__column {
+    width: calc(50% - 20px);
+
+    @media (--max767) {
+      width: 100%;
+    }
+  }
+
+  &__label {
+    display: block;
+    min-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  &__radio {
+    display: inline-block;
+    width: 49%;
+
+    @media (--mobile) {
+      width: 100%;
+    }
+
+    .b-checkbox {
+      display: inline-flex;
+      width: 48%;
+      height: 57px;
+      margin-right: 0;
+      align-items: center;
+
+      @media (--max767) {
+        height: auto;
+      }
+      @media (--mobile) {
+        width: auto;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  /* table */
+  &__t {
+
+    .basket-item {
+
+      &:last-child {
+        margin-bottom: 0;
+
+        @media (--max767) {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+
+      &__t {
+        height: auto !important;
+      }
+
+      &__article {
+        display: block !important;
+        width: auto !important;
+        height: auto;
+      }
+    }
+
+    .b-form__item { /* textarea wrap */
+      margin-top: 20px;
+    }
+  }
+
+  &__time {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    & > span {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 1px;
+      background-color: var(--border-main-about);
+    }
+
+    .b-form__item {
+      max-width: calc(50% - 10px);
+    }
+  }
+  &__steps {
+    &--load {
+      .btn {
+        display: flex;
+        width: 176px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @media(--mobile) {
+          width: 100%;
+        }
+        .i-icon {
+          margin-right: 10px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    &--file {
+      .b-form {
+        &__file {
+          label {
+            display: flex;
+            width: 176px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            @media(--mobile) {
+              width: 100%;
+            }
+            .i-icon {
+              margin-right: 10px;
+            }
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .b-form__item {
+    margin-bottom: 0;
+  }
+
+  .select {
+
+    &-scroll {
+      max-height: 167px;
+    }
+
+    &-items ul > * {
+      padding: 17px 15px;
+    }
+
+    &-wrapper {
+      width: var(--inputs-width-d);
+      max-width: 100%;
+
+      @media (--max767) {
+        width: 100%;
+      }
+    }
+  }
+}

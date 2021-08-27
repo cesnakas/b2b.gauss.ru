@@ -1,0 +1,28 @@
+@import "../../variables.css";
+
+.p {
+
+  &:hover {
+
+    .p__favorite {
+      opacity: 1;
+    }
+  }
+
+  &__favorite {
+
+    &:hover {
+
+      svg * {
+        stroke: var(--orange-l);
+      }
+    }
+  }
+
+  &__title {
+
+    &:hover {
+      color: var(--orange-l);
+    }
+  }
+}

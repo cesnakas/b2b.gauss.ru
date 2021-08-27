@@ -1,0 +1,149 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+.b-range-slider {
+  width: 100%;
+  height: 115px;
+  padding-top: 12px;
+  
+  &__inputs {
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+      min-height: unset !important;
+      height: 27px;
+      width: 80px !important;
+      padding: 0 10px !important;
+      background-color: #fff !important;
+      border-color: var(--grey-1) !important;
+      color: var(--black-2) !important;
+
+      &::placeholder {
+        color: var(--black-2) !important;
+      }
+    }
+  }
+  &__inner {
+    width: 40%;
+    
+    span {
+      color: var(--blue);
+    }
+  }
+  &__slider {
+    margin-top: 26px;
+  }
+}
+
+.b-range-slider .noUi {
+  
+  &-handle {
+    border: none;
+    border-radius: 4px;
+  }
+  &-horizontal {
+    margin: 0 15px;
+    height: 3px;
+    background-color: var(--red);
+  }
+  &-handle {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: none;
+    top: calc(50% + 2px);
+    left: 0;
+    right: -7px !important;
+    transform: translateY(-50%);
+    cursor: pointer;
+    
+    &:hover {
+      
+      &:after {
+        border-color: var(--blue);
+      }
+    }
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    
+    &:after {
+      width: 24px;
+      height: 24px;
+      border: 1px solid var(--black-3);
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(95,99,119,.27);
+      transition: .2s;
+      z-index: 1;
+    }
+  }
+  &-target {
+    border: none;
+    border-radius: 4px;
+    background-color: var(--grey-1);
+    box-shadow: none;
+  }
+  &-connects {
+    position: relative;
+    overflow: visible;
+    
+    &:before,
+    &:after {
+      content: '';
+      width: 12px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background-color: var(--grey-1);
+    }
+    
+    &:before {
+      right: 100%;
+    }
+    
+    &:after {
+      left: 100%;
+    }
+  }
+  &-connect {
+    height: 3px;
+    background: var(--blue);
+  }
+  &-tooltip {
+    bottom: inherit;
+    top: 130%;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+  }
+}
+.b-range-slider--price .noUi {
+  
+  &-handle {
+    
+    &:hover {
+      
+      &:after {
+        border-color: var(--orange-l);
+      }
+    }
+  }
+  
+  &-connect {
+    background: var(--orange-l);
+  }
+}

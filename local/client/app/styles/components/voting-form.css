@@ -1,0 +1,225 @@
+@import "../variables.css";
+@import "../media.css";
+
+.voting-form {
+
+  &-item {
+    margin-bottom: 23px;
+
+    &__question {
+      font-weight: 400;
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 16px;
+
+      &.error {
+        color: var(--red);
+      }
+    }
+
+    &__answers {
+      display: flex;
+      flex-wrap: wrap;
+
+      .select {
+        padding: 5px 44px 5px 20px;
+
+        &-wrapper {
+          width: 100%;
+        }
+
+        &-scroll {
+          max-height: 230px;
+        }
+
+        &-items {
+          ul > * {
+            padding: 11px 9px 5px 20px;
+          }
+        }
+      }
+
+      .b-checkbox {
+        margin-bottom: 3px;
+
+        &:not(.b-checkbox--radio) {
+          width: 100%;
+          margin-right: 0;
+        }
+
+        &--radio {
+          margin-right: 20px;
+
+          .b-checkbox__input {
+            &:checked:not(.disabled) {
+              + .b-checkbox__box {
+                background-color: #FFFFFF!important;
+                border-color: var(--black-3);
+
+                &:after {
+                  width: 13px;
+                  height: 13px;
+                  background-color: var(--orange-l);
+                }
+              }
+            }
+          }
+
+          .b-checkbox__text {
+            min-width: 36px;
+          }
+        }
+
+        &__box {
+
+          @media(--max767) {
+            margin: 0 10px 0 0;
+          }
+        }
+
+        + .b-form__item {
+          margin-top: 12px;
+        }
+      }
+
+      .b-form__item {
+        width: 100%;
+      }
+    }
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 15px;
+      background: #eee;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border: 1px solid #949BA8;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgb(95 99 119 / 27%);
+      transition: .2s;
+      z-index: 1;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      border: 1px solid #949BA8;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgb(95 99 119 / 27%);
+      transition: .2s;
+      z-index: 1;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    input.slider {
+      min-height: 5px !important;
+      height: 5px;
+      padding: 0 !important;
+
+    }
+  }
+  &-range {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 10px;
+    .b-checkbox {
+      margin-right: 0;
+      &__label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &__box {
+        display: none;
+        margin-right: 0;
+      }
+      &__text {
+         min-width: 24px;
+         text-align: center;
+        cursor: default ;
+
+      }
+    }
+  }
+  &-range-d {
+    display: flex;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    font-size: 12px;
+
+    span {
+      margin-right: 24px;
+
+      @media(--max767) {
+        display: block;
+        width: 100%;
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  .b-modal__bottom {
+
+    .b-form__pp {
+      max-width: 400px;
+
+      @media(--mobile) {
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    .btn {
+      width: 300px;
+      max-width: 100%;
+
+      @media(--mobile) {
+        width: 100%;
+      }
+    }
+  }
+
+  .b-form {
+
+    input:not(.b-count__input),
+    textarea {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &::placeholder {
+        color: var(--black-3);
+      }
+    }
+  }
+}
+
+.vote-note-box-text {
+  font-weight: 500;
+  text-align: right;
+  margin-top: 10px;
+
+  @media(--max767) {
+    text-align: center;
+  }
+}
+.requiredComment {
+  margin-top: 0;
+}
+
+input.vote-item-text.error {
+  border: solid 1px red;
+
+}

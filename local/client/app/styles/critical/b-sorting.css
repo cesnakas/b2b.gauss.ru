@@ -1,0 +1,59 @@
+@import "../variables.css";
+@import "../media.css";
+
+
+.b-sorting {
+  margin-bottom: 20px;
+  
+  &__top {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__bottom {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__text {
+    
+    span {
+      color: var(--orange-l);
+    }
+  }
+  
+  &__company {
+    margin-right: auto;
+  }
+  
+  &__sort {
+    width: 230px;
+    margin-left: 20px;
+  }
+  
+  &__display {
+    display: flex;
+    width: 50px;
+    margin-left: 10px;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--grey-1);
+    background-color: #fff;
+    
+    &.active {
+      cursor: default;
+      
+      svg * {
+        fill: var(--orange-l);
+      }
+    }
+    
+    svg * {
+      fill: var(--black-3);
+      transition: fill .2s;
+    }
+  }
+}

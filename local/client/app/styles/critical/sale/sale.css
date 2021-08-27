@@ -1,0 +1,35 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+:root {
+
+  --margin-d: 20px;
+}
+
+.sale { /* список акций */
+  display: flex;
+  margin-left: calc(var(--margin-d) * -1);
+  margin-bottom: calc(var(--margin-d) * -1);
+  flex-wrap: wrap;
+
+  @media (--max767) {
+    margin-bottom: 0;
+  }
+
+  &__more {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: flex-end;
+  }
+
+  .sale-item {
+
+    @media (--max767) {
+      width: calc(50% - var(--margin-d));
+    }
+    @media (--mobile) {
+      width: calc(100% - var(--margin-d));
+    }
+  }
+}

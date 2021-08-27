@@ -1,0 +1,1 @@
+<a href="https://academy.gauss.ru" target="_blank"><img alt="banner_academy.jpg" src="/local/templates/.default/images/academy.jpg" title="Академия Gauss"></a>

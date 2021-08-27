@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Arial";
+    font-display: fallback;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Arial";
+    font-display: fallback;
+    font-weight: 500;
+}
+a:hover{color: #0DB9F9 !important;}

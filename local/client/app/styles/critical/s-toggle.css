@@ -1,0 +1,155 @@
+@import "../media.css";
+@import "../variables.css";
+
+/* hover-эффекты в папке /local/client/app/styles/components/ */
+.s-toggle {
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  &--in {
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--grey-1);
+      margin-bottom: 0;
+    }
+
+    .s-toggle__title {
+      background-color: #fff;
+    }
+
+    .s-toggle__list {
+      padding: 25px;
+      border-top: 1px solid var(--grey-1);
+      background-color: #fff;
+
+      @media (--mobile) {
+        padding: 20px 15px;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    padding: 23px 25px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--grey);
+    cursor: pointer;
+    transition: color .2s;
+    
+    @media (--mobile) {
+      padding: 15px 15px;
+    }
+
+    span {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.2;
+
+      @media (--mobile) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+  }
+  &-arrow {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 35px;
+      height: 2px;
+      width: 10px;
+      background-color: var(--black-3);
+      transition: background-color .2s, transform .2s;
+    }
+
+    &:before {
+      transform: translateX(6px) rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &.active {
+
+      &:before,
+      &:after {
+        background-color: var(--orange);
+      }
+
+      &:before {
+        transform: translateX(6px) rotate(-45deg);
+      }
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &--presentation {
+   position: relative;
+   .s-toggle {
+     &__file-presentation {
+      position: absolute;
+      top: 21px;
+      right: 25px;
+      z-index: 2;
+      @media(--mobile) {
+        top: 11px;
+        right: 11px;
+      }
+      &:hover {
+        .i-icon * {
+          fill: var(--orange);
+        }
+      }
+     }
+   }
+   .s-toggle-arrow:before, .s-toggle-arrow:after {
+     right: 85px;
+
+     @media(--mobile) {
+       right: 50px;
+     }
+
+   }
+   .s-toggle {
+     &__title{
+      &.s-toggle-arrow {
+        span {
+          @media(--mobile) {
+            width: calc(100% - 55px);
+          }
+        }
+      }
+      & > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @media(--mobile) {
+          justify-content: flex-start;
+        }
+        .i-icon {
+          @media(--mobile) {
+            margin-right: 15px;
+          }
+        }
+
+      }
+
+     }
+   }
+  }
+
+}

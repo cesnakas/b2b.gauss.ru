@@ -1,0 +1,16 @@
+@import "../../variables.css";
+
+.b-sort {
+  &__display {
+    &:hover {
+      svg * {
+        fill: var(--black-1);
+      }
+    }
+  }
+  &__text {
+     text-align: right;
+     margin-right: 10px;
+     line-height: 14px;
+  }
+}

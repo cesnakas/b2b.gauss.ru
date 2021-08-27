@@ -1,0 +1,11 @@
+@import "../../variables.css";
+
+.lk-main {
+  &__param {
+    a {
+      &:hover {
+        color: var(--orange-l);
+      }
+    }
+  }
+}

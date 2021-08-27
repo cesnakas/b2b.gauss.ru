@@ -1,0 +1,191 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+:root {
+  --lk-sidebar-d: 271px;
+  --lk-sidebar-n: 270px;
+}
+
+.lk-aside {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--grey-3);
+
+  div[data-form-submit='SIMPLE_FORM_11'], div[data-form-submit='SIMPLE_FORM_12'], div[data-form-submit='SIMPLE_FORM_13'] {
+    .b-form__file {
+      border: 2px dashed #ccc;
+      border-radius: 20px;
+      width: 480px;
+      margin: 0;
+      padding: 20px;
+      @media (--max767) {
+        width: auto;
+      }
+    }
+    .b-form__file.highlight {
+      border-color: purple;
+    }
+  }
+  
+  &-sidebar {
+    width: var(--lk-sidebar-d);
+    padding: 10px 35px;
+    background-color: var(--black-text);
+    
+    @media (--max1700) {
+      width: var(--lk-sidebar-n);
+    }
+    @media (--max1279) {
+      width: 1px;
+      padding: 0;
+      background-color: transparent;
+    }
+    
+    &__logo {
+      display: block;
+      margin-bottom: 93px;
+      margin-top: 20px;
+      
+      svg {
+        width: 146px;
+        height: 49px;
+        
+        * {
+          fill: #fff;
+        }
+      }
+    }
+    
+    .btn--transparent {
+      color: #fff;
+      border-color: #fff;
+    }
+    
+    &__links {
+      margin-bottom: 60px;
+      
+      a {
+        display: flex;
+        margin-bottom: 10px;
+        align-items: center;
+        color: #fff;
+        
+        span { /* количество заказов */
+          display: flex;
+          width: 20px;
+          height: 20px;
+          margin-left: 15px;
+          align-items: center;
+          justify-content: center;
+          padding-top: 2px;
+          border-radius: 50%;
+          background-color: var(--orange-l);
+          font-size: 9px;
+          font-weight: 500;
+          color: var(--black-text);
+        }
+      }
+    }
+  }
+  
+  &__main {
+    display: flex;
+    width: calc(100% - var(--lk-sidebar-d));
+    flex-direction: column;
+    
+    @media (--max1700) {
+      width: calc(100% - var(--lk-sidebar-n));
+    }
+    @media (--max1279) {
+      width: 100%;
+      margin-left: -1px;
+    }
+  }
+  
+  
+  
+  
+  /* основные стили сайта */
+  .h {
+    
+    &__logo {
+      display: none;
+      
+      @media (--max1279) {
+        display: flex;
+      }
+    }
+
+    &-tel__inner {
+      .h-tel__link {
+
+        @media(--max1279) {
+          text-align: right;
+        }
+
+        &:not(:first-child) {
+
+          @media(--max1279) {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+  .main {
+    padding-bottom: 50px;
+  
+    @media (--max767) {
+      padding-bottom: 20px;
+    }
+  }
+  .f {
+    margin-top: auto;
+    
+    &__bottom {
+      padding-bottom: 20px;
+    }
+  }
+  .container {
+    max-width: 1406px;
+    padding: 0 15px;
+  }
+  .f {
+    margin-top: auto;
+  }
+  .b-form {
+    max-width: 550px;
+    
+    @media (--max1279) {
+      max-width: 100%;
+    }
+    
+    &__bottom {
+      margin-top: 15px;
+      
+      .btn {
+        margin-right: 15px;
+        margin-left: 0;
+      }
+    }
+  }
+  .b-tabs {
+    margin-top: 40px;
+  }
+  
+  .green {
+    color: var(--green);
+  }
+  .red {
+    color: var(--red);
+  }
+  .yellow {
+    color: var(--orange-l);
+  }
+  .grey {
+    color: var(--black-3);
+  }
+  .blue {
+    color: var(--blue-l);
+  }
+}

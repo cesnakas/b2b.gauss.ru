@@ -1,0 +1,166 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+:root {
+  --padding-v-d: 30px;
+  --padding-v-m: 15px;
+  
+  --param-md-d: 5px;
+}
+
+/* основная страница Лк */
+.lk-main {
+  
+  &__columns {
+    display: flex;
+    margin-left: -20px;
+  
+    @media (--max1279) {
+      display: block;
+    }
+  }
+  
+  &__column {
+    display: flex;
+    width: calc(50% - 20px);
+    margin-left: 20px;
+    flex-direction: column;
+    
+    @media (--max1279) {
+      width: calc(100% - 20px);
+    }
+  }
+  
+  &__item {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    padding: 0 var(--padding-v-d) 25px;
+    background-color: #fff;
+    
+    @media (--max767) {
+      padding: 0 var(--padding-v-m) 20px;
+    }
+    & .debmoney {
+      color: var(--red);
+      float: right;
+    }
+  }
+  
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 calc(var(--padding-v-d) * -1) 30px;
+    padding: 20px var(--padding-v-d);
+    border-bottom: 1px solid var(--grey-1);
+    
+    @media (--max767) {
+      margin: 0 calc(var(--padding-v-m) * -1) 20px;
+      padding: 15px var(--padding-v-m);
+    }
+
+    .link-underline {
+      margin-left: 15px;
+    }
+  }
+  &__notice {
+    margin-top: 5px;
+    color: green;
+    font-size: 11px;
+  }
+  &__subscribe {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &-title {
+      min-width: 125px;
+    }
+
+    .b-checkbox {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  &__params {
+    margin-bottom: calc(var(--param-md-d) * -1);
+    
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      
+      @media (--max767) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  
+  &__param {
+    display: flex;
+    margin-bottom: var(--param-md-d);
+    
+    @media (--mobile) {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    & > * {
+      
+      &:first-child {
+        min-width: 190px;
+        max-width: 190px;
+        padding-right: 20px;
+        
+        @media (--mobile) {
+          min-width: 0;
+          max-width: 100%;
+          color: var(--black-3);
+        }
+      }
+    }
+    
+    a {
+      color: var(--blue-l);
+    }
+  }
+  
+  &__img {
+    display: flex;
+    position: relative;
+    
+    span { /* text */
+      display: block;
+      position: absolute;
+      top: 55px;
+      left: 45px;
+      right: 114px;
+      font-size: 16px;
+      color: #fff;
+      z-index: 1;
+      
+      @media (--max767) {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+      }
+    }
+    
+    img {
+      width: 633px;
+      height: 481px;
+      object-fit: cover;
+    }
+  }
+  
+  &__text {
+    max-width: 385px;
+  }
+
+  .btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}

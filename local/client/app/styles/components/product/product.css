@@ -1,0 +1,43 @@
+@import "../../variables.css";
+
+.product {
+
+  &-storage {
+    &__item {
+      &--favorite {
+        &:hover {
+          span {
+            border-color: transparent;
+          }
+          svg * {
+            stroke: var(--orange-l);
+          }
+        }
+      }
+    }
+  }
+
+  &-doc {
+    &:hover {
+      .product-doc__icon {
+        &:after {
+          top: 0;
+        }
+        svg * {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+
+  &__link {
+    &:hover {
+      color: var(--orange-l);
+      .i-icon {
+        * {
+          fill: var(--orange-l);
+        }
+      }
+    }
+  }
+}

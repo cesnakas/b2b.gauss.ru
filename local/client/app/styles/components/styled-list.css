@@ -1,0 +1,19 @@
+@import "../variables.css";
+
+.styled-list {
+
+  a:not(.btn) {
+
+    &:hover {
+      color: var(--orange-l);
+    }
+  }
+  & img {
+    height: auto !important;
+  }
+  & p {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

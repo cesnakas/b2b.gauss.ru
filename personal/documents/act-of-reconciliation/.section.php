@@ -1,0 +1,3 @@
+<?
+$sSectionName = "Акт сверки";
+$arDirProperties = [];

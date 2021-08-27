@@ -1,0 +1,10 @@
+#citfact_form_subscribe_left input.hide {
+    display:none !important;
+}
+
+#citfact_form_subscribe_left .errors_cont,
+#citfact_form_subscribe_left .success_cont
+{
+    font-size: 14px;
+    margin: 5px 0;
+}

@@ -1,0 +1,36 @@
+@import "../variables.css";
+@import "../media.css";
+
+/* элементы тех документации */
+.t-doc { /* &.s-toggle.s-toggle--in */
+  border: 1px solid var(--grey-1);
+  margin-top: 10px;
+
+  &-wrap { /* &.s-toggle__list */
+    padding: 15px 25px 25px !important;
+
+    @media (--max767) {
+      padding: 5px 15px 15px !important;
+    }
+  }
+
+  &__item {
+    font-size: 16px;
+
+    @media (--max1023) {
+      font-size: 14px;
+    }
+
+    @media (--mobile) {
+      font-size: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 21px;
+
+      @media (--mobile) {
+        margin-bottom: 26px;
+      }
+    }
+  }
+}

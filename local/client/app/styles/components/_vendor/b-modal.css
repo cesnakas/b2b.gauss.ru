@@ -1,0 +1,264 @@
+@import "../../media.css";
+@import "../../variables.css";
+
+.b-modal {
+  display: none;
+  width: calc(100% - 30px);
+  max-width: 534px;
+  padding: 40px 45px;
+  margin: 20px auto;
+  background-color: #fff;
+  position: relative;
+  
+  @media (--max767) {
+    padding: 20px 15px;
+  }
+
+  &--basket {
+    max-width: 1000px;
+  }
+  
+  &--small {
+    max-width: 444px;
+  }
+
+  &--big {
+    max-width: 700px;
+  }
+
+  &--questionnaire {
+    max-width: 800px;
+    padding: 40px 30px;
+
+    @media(--max767) {
+      padding: 20px 15px;
+    }
+  }
+
+  &--fo {
+
+    .b-modal-f {
+
+      &__bottom {
+
+        @media(--mobile) {
+          flex-wrap: wrap;
+        }
+
+        > :first-child {
+
+          @media(--mobile) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
+        }
+
+        .btn {
+
+          + .btn {
+
+            @media(--mobile) {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .b-form__item {
+        width: calc(100% - 130px);
+        margin-bottom: 0;
+      }
+
+      .b-count {
+        width: 120px;
+      }
+    }
+  }
+  
+  &__close {
+    position: absolute !important;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+  }
+  
+  &__success { /* сообщение о успешной отправке */
+    color: var(--green);
+  }
+  
+  &__bottom {
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+
+    @media (--mobile) {
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    &--auth {
+
+      @media (--mobile) {
+        flex-wrap: nowrap;
+      }
+
+      div a {
+
+        @media (--mobile) {
+          display: block;
+        }
+      }
+    }
+
+    &--col {
+      margin-top: 15px;
+      flex-direction: column;
+      align-items: stretch;
+
+      .b-form__pp {
+        margin-right: 0;
+        margin-bottom: 10px;
+        
+
+        & + .btn:last-child {
+          margin-left: 0;
+        }
+      }
+    }
+  
+    .link {
+      margin-right: 30px;
+
+      &:first-child {
+
+        @media (--mobile) {
+          order: -2;
+          width: calc(100% - 120px);
+        }
+      }
+
+      & + .btn {
+
+        @media (--mobile) {
+          order: -1;
+        }
+      }
+    }
+    .btn:last-child {
+      margin-left: auto;
+    }
+  }
+  
+  /* fast-order */
+  &-f {
+    
+    &__item {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    
+    &__bottom {
+      display: flex;
+      
+      & > * {
+        
+        &:first-child {
+          width: calc(100% - 130px - 10px);
+          margin-right: 10px;
+        }
+        
+        &:last-child:not(:first-child) {
+          width: 130px;
+        }
+      }
+
+      .btn:first-child:last-child {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      .btn {
+        padding-right: 10px;
+        padding-left: 10px;
+
+        & + .btn {
+          width: auto;
+          flex-grow: 1;
+        }
+      }
+    }
+  
+  
+    .b-form__item {
+      width: calc(100% - 130px - 10px);
+      margin-right: 10px;
+      margin-bottom: 0;
+    
+      input {
+        min-height: 40px;
+        padding-left: 15px;
+      }
+    }
+    .b-count {
+      width: 130px;
+    }
+    .link-toggle {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+
+.mfp {
+
+  &-figure:after {
+    background-color: #ffffff;
+  }
+  
+  &-container {
+    padding: 0 !important;
+  
+    .mfp-content .mfp-iframe {
+      max-width: calc(100vw - 30px);
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  
+    .mfp-content .b-modal {
+      display: block;
+    }
+  }
+  
+  &-fade {
+    
+    &.mfp-bg {
+      opacity: 0;
+      transition: all 0.15s ease-out;
+      background: var(--mask);
+      
+      &.mfp-ready {
+        opacity: 1 !important;
+      }
+    }
+    &.mfp-bg.mfp-ready {
+      opacity: 0.3;
+    }
+    &.mfp-bg.mfp-removing {
+      opacity: 0;
+    }
+    &.mfp-wrap .mfp-content {
+      opacity: 0;
+      transition: all 0.15s ease-out;
+    }
+    &.mfp-wrap.mfp-ready .mfp-content {
+      opacity: 1;
+    }
+    &.mfp-wrap.mfp-removing .mfp-content {
+      opacity: 0;
+    }
+  }
+}

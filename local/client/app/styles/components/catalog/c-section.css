@@ -1,0 +1,13 @@
+@import "../../variables.css";
+
+.c-section {
+  &__item {
+    a {
+      &:not(.title-2, .link-more) {
+        &:hover {
+          color: var(--orange-l);
+        }
+      }
+    }
+  }
+}

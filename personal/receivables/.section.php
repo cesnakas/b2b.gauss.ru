@@ -1,0 +1,3 @@
+<?
+$sSectionName = "Дебиторская задолженность";
+$arDirProperties = [];

@@ -1,0 +1,15 @@
+@import "../../variables.css";
+
+.c-subsection {
+  &__item {
+    &:hover {
+      box-shadow: var(--shadow);
+      transition-duration: .2s;
+    }
+    .title-2 {
+      &:hover {
+        color: var(--orange-l);
+      }
+    }
+  }
+}

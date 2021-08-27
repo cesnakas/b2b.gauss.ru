@@ -1,0 +1,3 @@
+<?php
+$MESS['AGREEMENT_POPUP_TEXT'] = 'We use cookies to collect traffic data, analyze it, select suitable content and advertising for you, and give you the opportunity to share information on social networks. We also transfer information about your actions on the site in an impersonal form to our partners: social networks and advertising and web analytics companies. By continuing to use this site, you agree to the use of cookies in accordance with this notice.';
+?>

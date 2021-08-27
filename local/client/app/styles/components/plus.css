@@ -1,0 +1,57 @@
+@import "../media.css";
+@import "../variables.css";
+
+.plus {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  padding: 15px;
+  cursor: pointer;
+  transition: height .2s;
+  
+  &.active {
+  
+    &:before {
+      height: 2px;
+    }
+  }
+  
+  &:hover {
+    
+    &:before,
+    &:after {
+      background-color: var(--orange-l);
+    }
+  }
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 14px;
+    margin: auto;
+    background-color: var(--border-main-about);
+    transition: .2s;
+  }
+  &:before {
+  }
+  &:after {
+    transform: rotate(90deg) translateZ(0);
+  }
+  
+  
+  &--cross {
+  
+    &:before {
+      transform: rotate(-45deg) translateZ(0);
+    }
+    &:after {
+      transform: rotate(45deg) translateZ(0);
+    }
+  }
+}

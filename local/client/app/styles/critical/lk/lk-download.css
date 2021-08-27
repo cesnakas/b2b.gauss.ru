@@ -1,0 +1,127 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+.lk-download {
+
+  &__tab {
+    &--ftp {
+      .lk-download {
+        &__form {
+          padding: 24px 27px 30px;
+
+          @media(--max767) {
+            padding: 15px;
+          }
+        }
+      }
+    }
+    &--etim {
+      .lk-download {
+        &__text {
+          width: 836px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    width: 1083px;
+    max-width: 100%;
+
+    + .lk-download__form {
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  &__form {
+    width: 469px;
+    max-width: 100%;
+    padding: 30px 40px;
+    background-color: var(--grey-3);
+    font-size: 14px;
+
+    @media(--max767) {
+      padding: 15px;
+    }
+
+    .title-2 {
+      margin-bottom: 28px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .b-form {
+
+      &__bottom {
+        margin-top: 35px;
+
+        @media(--max767) {
+          text-align: left;
+        }
+
+        .btn {
+          width: 270px;
+          max-width: 100%;
+
+          @media(--mobile) {
+            width: 100%;
+            margin-top: 0;
+          }
+
+          span {
+            margin-left: 9px;
+          }
+          svg {
+            min-width: 20px;
+            max-width: 20px;
+            height: 17px;
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .b-checkbox {
+        display: block;
+        margin-bottom: 14px;
+      }
+
+    }
+  }
+
+  &__btn {
+    margin-top: 35px;
+
+    a {
+      width: 225px;
+      max-width: 100%;
+
+      @media(--mobile) {
+        width: 100%;
+      }
+    }
+  }
+
+  .b-tabs {
+    margin-top: 0;
+
+    &-head {
+      margin-bottom: 30px;
+
+      @media(--max767) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-link.active,
+    &-link:hover {
+      color: var(--orange-l);
+    }
+  }
+}

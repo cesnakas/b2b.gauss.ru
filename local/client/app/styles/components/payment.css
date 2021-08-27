@@ -1,0 +1,31 @@
+@import "../media.css";
+@import "../variables.css";
+
+.payment {
+  display: flex;
+
+  &__icon {
+    width: 26px;
+    margin-right: 5px;
+    flex-shrink: 0;
+    text-align: center;
+
+    svg {
+      width: auto;
+      height: 20px;
+
+      * {
+        fill: var(--black-3);
+      }
+    }
+  }
+
+  &__text {
+
+    span {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+  }
+}

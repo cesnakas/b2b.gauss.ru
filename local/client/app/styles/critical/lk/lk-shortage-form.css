@@ -1,0 +1,88 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+.lk-shortage-form {
+
+  .b-form {
+
+    &__item {
+
+      &--textarea {
+        margin-top: 40px;
+
+        @media(--max767) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &__upload {
+
+      @media(--mobile) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      &.active {
+
+        label {
+          @media(--mobile) {
+            max-width: calc(100% - 30px);
+            flex: 1 1 calc(100% - 30px);
+          }
+        }
+      }
+
+      [data-btn-delete] {
+        @media(--mobile) {
+          margin-left: 10px;
+          margin-right: -10px;
+        }
+      }
+    }
+
+    &__file {
+      margin: 20px 0 30px;
+      padding: 25px 20px;
+      border: 2px dashed #ccc;
+      border-radius: 20px;
+
+      @media(--max1023) {
+        margin: 20px 0;
+        padding: 20px;
+      }
+      @media(--max767) {
+        margin: 15px 0;
+        padding: 20px;
+      }
+
+      &.error {
+
+        .b-form__text {
+          display: none;
+
+          &.b-form__text--extension,
+          &.b-form__text--size {
+            display: block;
+          }
+        }
+      }
+
+      .b-form__label {
+        margin-bottom: 30px;
+
+        @media(--max1023) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &__bottom {
+      margin-top: 25px;
+
+      @media(--max767) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

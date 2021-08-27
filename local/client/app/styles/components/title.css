@@ -1,0 +1,36 @@
+@import "../variables.css";
+
+.title-1 {
+
+  &[href],
+  a {
+
+    &:hover {
+      color: var(--orange-l);
+    }
+  }
+}
+
+.title-2,
+h2 {
+
+  &[href],
+  a {
+
+    &:hover {
+      color: var(--orange-l);
+    }
+  }
+}
+
+.title-3,
+h3 {
+
+  &[href],
+  a {
+
+    &:hover {
+      color: var(--orange-l);
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import "../variables.css";
+@import "../media.css";
+@import "../helpers.css";
+
+:root {
+  --social-hover-color: #fff;
+}
+
+.m-menu { /* display дублируется в style.css */
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 34px 15px;
+  background-color: var(--black-text);
+  color: #fff;
+  transform: translateY(-100%);
+  overflow: auto;
+  transition: .8s;
+  z-index: 19;
+  
+  &--catalog {
+    background-color: #fff;
+    color: var(--black-text);
+  }
+  
+  /*@media (--max1023) { в скриптах
+    display: block;
+  }*/
+  
+  &.active {
+    transform: translateY(0);
+    top: 100px;
+  }
+
+  &__socials {
+    display: flex;
+    margin-top: 36px;
+  }
+
+  &__social {
+    @extend .social;
+    border: 1px solid #fff;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  
+  & > a {
+    display: flex;
+    margin-bottom: 23px;
+    font-weight: 500;
+    
+    &:hover:not(.btn) {
+      color: var(--orange-l);
+    }
+  
+    span { /* количество заказов */
+      display: flex;
+      width: 20px;
+      height: 20px;
+      margin-left: 15px;
+      align-items: center;
+      justify-content: center;
+      padding-top: 2px;
+      border-radius: 50%;
+      background-color: var(--orange-l);
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--black-text);
+    }
+    
+    &.btn {
+      display: inline-block;
+    }
+  }
+}

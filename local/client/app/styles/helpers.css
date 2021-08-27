@@ -1,0 +1,225 @@
+
+
+/* переменные задаются в файлах, где подрубается */
+.slide-pseudo-padding {
+  height: auto;
+  
+  @media (--max767) {
+    display: flex;
+    width: calc(var(--slide-width-m) + var(--slide-margin-m)) !important;
+  }
+  
+  &:last-child {
+    
+    @media (--max767) {
+      width: calc(var(--slide-width-m) + (var(--slide-margin-m) * 2)) !important;
+    }
+    
+    &:after {
+      content: '';
+      display: block;
+      min-width: var(--slide-margin-m);
+    }
+  }
+  
+  &:before {
+    content: '';
+    display: block;
+    min-width: var(--slide-margin-m);
+  }
+  
+  & > div { /* .p content card */
+    height: 100%;
+    
+    @media (--max767) {
+      width: var(--slide-width-m);
+    }
+  }
+}
+
+.social {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--social-default-color);
+  border-radius: 50%;
+  transition: background-color .2s, border-color .2s;
+  
+  @media (--max1023) {
+    background-color: var(--social-default-color);
+  }
+  
+  &:hover {
+    background-color: var(--social-default-color);
+    border-color: var(--social-hover-color);
+    
+    svg * {
+      fill: var(--social-hover-color);
+    }
+  }
+  
+  &--inst svg {
+    width: 15px;
+    height: 15px;
+  }
+  
+  &--facebook svg {
+    width: 8px;
+    height: 15px;
+  }
+  
+  &--vk svg {
+    width: 16px;
+    height: 9px;
+  }
+  
+  &--rsa svg {
+    width: 12px;
+    height: 12px;
+  }
+  
+  svg * {
+    transition: fill .2s;
+    fill: var(--social-default-color);
+    
+    @media (--max1023) {
+      fill: var(--social-hover-color);
+    }
+  }
+}
+
+.search {
+  
+  .b-form {
+    
+    &__item {
+      display: flex;
+      width: 100%;
+      margin-bottom: 0 !important;
+      border: 1px solid var(--h-border);
+      background-color: transparent !important;
+      
+      & > input {
+        width: calc(100% - var(--search-btn-width-d));
+        min-height: 46px;
+        padding-top: 20px !important;
+        padding-bottom: 12px !important;
+        color: var(--black) !important;
+        -webkit-text-fill-color: var(--black) !important;
+        border: none;
+        background-color: transparent !important;
+        font-weight: 300;
+        
+        @media (--max1279) {
+          width: calc(100% - var(--search-btn-width-t));
+        }
+      }
+    }
+    
+    &__label {
+      opacity: 1;
+      
+      &.active {
+        top: 3px;
+
+        & + input {
+          color: var(--black) !important;
+          -webkit-text-fill-color: var(--black) !important;
+        }
+      }
+
+      & + input {
+        color: transparent !important;
+        -webkit-text-fill-color: transparent !important;
+      }
+    }
+  }
+  
+  button {
+    width: var(--search-btn-width-d);
+    position: relative;
+    cursor: pointer;
+    
+    @media (--max1279) {
+      width: var(--search-btn-width-t);
+    }
+
+    &:hover svg *:not(g) {
+      fill: var(--orange-l);
+    }
+    
+    svg {
+      width: 18px;
+      height: 18px;
+
+      *:not(g) {
+        transition: fill .2s;
+      }
+    }
+    
+    &:after {
+      content: '';
+      width: 2px;
+      position: absolute;
+      top: 7px;
+      bottom: 7px;
+      left: 0;
+      background-color: var(--h-border);
+    }
+  }
+}
+
+.toggle-arrow {
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    height: 2px;
+    width: 8px;
+    background-color: var(--black-3);
+    transition: background-color .2s, transform .2s;
+  }
+
+  &:before {
+    transform: translateX(5px) rotate(-45deg);
+  }
+  &:after {
+    transform: rotate(45deg);
+  }
+}
+.toggle-arrow-active {
+
+  &:before,
+  &:after {
+    background-color: var(--orange);
+  }
+
+  &:before {
+    transform: translateX(5px) rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.statuses {
+
+  .red {
+    color: var(--red);
+  }
+  .green {
+    color: var(--green);
+  }
+  .yellow {
+    color: var(--orange-l);
+  }
+  .grey {
+    color: var(--black-3);
+  }
+}

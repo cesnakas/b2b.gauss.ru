@@ -1,0 +1,10 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+.main-banner {
+  margin-bottom: 37px;
+
+  @media(--max767) {
+    margin-bottom: 20px;
+  }
+}

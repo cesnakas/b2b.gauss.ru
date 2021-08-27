@@ -1,0 +1,57 @@
+@import "../../media.css";
+@import "../../variables.css";
+
+.manager-modal {
+  margin: 0;
+  padding: 5px 100px 5px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  z-index: 100 !important;
+  background-color: #fff;
+  transform: translateZ(0);
+
+  &__close {
+    position: absolute;
+    right: 12px;
+  }
+
+    &__text {
+        @media (--max767) {
+            display: none;
+        }
+    }
+
+    @media (--max767) {
+      padding: 10px 50px 10px 15px;
+      text-align: left;
+    }
+
+    &:before {
+       content: '';
+       position: absolute;
+       height: 2px;
+       width: 100%;
+       top: 0;
+       left: 0;
+       background: var(--grey-1);
+    }
+
+    &:after {
+       content: '';
+       position: absolute;
+       height: 2px;
+       width: 100%;
+       bottom: 0;
+       left: 0;
+       background: var(--grey-1);
+    }
+
+    &:not(.hidden) {
+       display: flex;
+    }
+}

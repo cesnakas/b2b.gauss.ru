@@ -1,0 +1,382 @@
+@import "../media.css";
+@import "../variables.css";
+
+.ed {
+  display: flex;
+
+  @media (--max1023) {
+    flex-direction: column;
+  }
+
+  &__main {
+    margin-right: 20px;
+    flex-grow: 1;
+
+    @media (--max1023) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    .b-tabs__head {
+      margin-bottom: 40px;
+    }
+
+
+    .b-tabs-link:not(:last-child) {
+
+      @media (--max1365) {
+        margin-right: 10px;
+      }
+    }
+
+    .btn--download {
+
+      @media (--max1365) {
+        padding: 15px 17px;
+      }
+      @media (--max767) {
+        width: 100%;
+        margin-right: 0;
+        white-space: normal;
+        text-align: center;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &:last-child {
+
+        @media (--max767) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  &__aside {
+    display: flex;
+    width: 320px;
+    margin-top: -10px;
+    flex-shrink: 0;
+    flex-direction: column;
+
+    @media (--max1023) {
+      width: 100%;
+      margin-top: 0;
+      flex-direction: column-reverse;
+    }
+
+    & > .btn {
+      margin-bottom: 19px;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+   .link-download {
+     margin-bottom: 20px;
+   }
+
+  }
+  &__bottom {
+     display: flex;
+     width: 100% !important;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 20px;
+
+      @media (--max767) {
+        display: block;
+      }
+
+      .btn {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .btn--loading {
+
+        svg * {
+          fill: var(--black);
+        }
+
+        span {
+          margin-right: 0;
+          color: var(--black);
+        }
+      }
+  }
+
+  &-presentation {
+    position: relative;
+    display: block;
+    height: 400px;
+    margin-bottom: 20px;
+    
+    @media (--max1279) {
+      height: 330px;
+    }
+
+    @media (--max767) {
+      height: 264px;
+    }
+
+    @media (--mobile) {
+      height: 180px;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__title {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 30px;
+      color: #fff;
+      font-weight: 400;
+      transition: color .2s;
+
+      @media (--max767) {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+      }
+    }
+  }
+  &-play {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translateY(-50%) translateX(-50%);
+
+    * {
+      fill: #fff;
+      transition: fill .2s;
+    }
+    
+    @media (--max767) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &-banner {
+    position: relative;
+    height: 400px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (--max1023) {
+      display: none;
+    }
+
+    &__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 40px 20px;
+      color: #fff;
+      text-align: center;
+    }
+    &__title {
+      margin-bottom: 20px;
+      padding: 0 20px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  &-tests {
+    padding: 27px 0 0;
+    margin-bottom: 20px;
+    background-color: var(--grey);
+
+    .title-4 {
+      padding: 0 27px;
+    }
+
+    &__item {
+      display: flex;
+      padding: 13px 27px;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--grey-1);
+
+      svg {
+        width: 20px;
+        height: 17px;
+
+        * {
+          transition: stroke .2s;
+        }
+      }
+    }
+  }
+
+  &-media {
+    display: flex;
+    margin-left: -20px;
+    margin-bottom: -40px;
+    flex-wrap: wrap;
+
+    &__card {
+      display: flex;
+      width: calc(33.3% - 20px);
+      margin-left: 20px;
+      margin-bottom: 40px;
+      flex-direction: column;
+      align-items: center;
+      
+      @media (--max1279) {
+        width: calc(50% - 20px);
+      }
+      @media (--max767) {
+        width: calc(100% - 20px);
+      }
+    }
+    &__content {
+      position: relative;
+      width: 100%;
+      height: 230px;
+      margin-bottom: 20px;
+
+      @media (--max1700) {
+        height: 170px;
+      }
+
+      @media (--max1279) {
+        height: 180px;
+      }
+
+      @media (--max767) {
+        height: 250px;
+      }
+
+      @media (--mobile) {
+        height: 180px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .ed-play {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    &__title {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+  }
+  &-webinar {
+    &__banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      background: var(--black);
+      color: #ffffff;
+      margin-bottom: 40px;
+      height: 400px;
+      @media(--max1023) {
+        height: auto;
+      }
+      @media(--mobile) {
+        padding: 15px;
+      }
+
+      .btn {
+        color: var(--black-text);
+      }
+
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__title {
+      font-size: 20px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 20px;
+      @media(--mobile) {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+    &__text {
+      text-align: center;
+      margin-bottom: 20px;
+
+      @media(--mobile) {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+
+    }
+
+    &__timer {
+      color: #fff;
+      display: inline-block;
+      font-weight: 400;
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 20px;
+
+      @media(--mobile) {
+        font-size: 24px;
+      }
+
+
+      &-item {
+        padding: 10px;
+        display: inline-block;
+
+        @media(--mobile) {
+          padding: 5px;
+        }
+
+      }
+
+      &-time {
+        display: inline-block;
+      }
+
+      &-text {
+        display: block;
+        padding-top: 5px;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+
+  }
+}

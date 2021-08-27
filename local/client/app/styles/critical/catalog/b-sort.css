@@ -1,0 +1,152 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+:root {
+  --filter-btn-width: 120px;
+  --filter-btn-ml: 10px;
+}
+
+.b-sort {
+  margin-bottom: 20px;
+
+  @media (--max767) {
+    margin-bottom: 10px;
+  }
+
+  &--min {
+
+    .b-sort__bottom {
+      justify-content: flex-end;
+    }
+  }
+  
+  &__top {
+    display: flex;
+    margin-bottom: 11px;
+    justify-content: space-between;
+  }
+  
+  &__bottom {
+    display: flex;
+    align-items: center;
+    
+    @media (--mobile) {
+      flex-wrap: wrap;
+    }
+    
+    .b-sort__text {
+      
+      @media (--max1023) {
+        display: none;
+      }
+    }
+  }
+  & .b-checkbox__label {
+    @media (--max1023) {
+      display: none;
+    }
+  }
+  &__text {
+    
+    span {
+      color: var(--orange-l);
+    }
+    
+    &--count {
+      white-space: nowrap;
+      padding-left: 10px;
+      
+      @media (--mobile) {
+        display: none;
+      }
+    }
+  }
+  
+  &__company {
+    width: 344px;
+    margin-right: auto;
+    
+    @media (--max1279) {
+      width: 250px;
+    }
+    @media (--max767) {
+      width: 100%;
+      margin-right: 5px;
+    }
+    @media (--mobile) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    .b-form__item--select {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__sort {
+    width: 230px;
+    margin-right: 5px;
+    margin-left: 20px;
+    
+    @media (--max1279) {
+      width: 180px;
+    }
+    @media (--max1023) {
+      display: none;
+    }
+  }
+  
+  &__display {
+    display: flex;
+    min-width: 50px;
+    margin-left: 5px;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--grey-1);
+    background-color: #fff;
+    
+    @media (--mobile) {
+      display: none;
+    }
+
+    &:last-child {
+
+      @media (--mobile) {
+        margin-right: 0;
+      }
+    }
+    
+    &.active {
+      cursor: default;
+      
+      svg * {
+        fill: var(--orange-l);
+      }
+    }
+    
+    svg * {
+      fill: var(--black-3);
+      transition: fill .2s;
+    }
+  }
+  
+  &__filter { /* .btn */
+    display: none;
+    width: var(--filter-btn-width);
+    margin-left: var(--filter-btn-ml);
+    align-self: stretch;
+    
+    @media (--max1023) {
+      display: flex;
+    }
+    @media (--max767) {
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+    @media (--mobile) {
+      margin: 0;
+      flex-grow: 1;
+    }
+  }
+}

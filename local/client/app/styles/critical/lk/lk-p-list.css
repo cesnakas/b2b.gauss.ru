@@ -1,0 +1,33 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+
+.lk-p-list {
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 18px 25px;
+    background-color: #fff;
+
+    .b-checkbox__text {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  }
+
+  &__look {
+    margin-left: auto;
+    cursor: pointer;
+
+    svg {
+      width: 24px;
+      height: 14px;
+
+      * {
+        fill: var(--black-3);
+        transition: fill .2s;
+      }
+    }
+  }
+}

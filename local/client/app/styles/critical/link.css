@@ -1,0 +1,132 @@
+@import "../variables.css";
+@import "../media.css";
+
+/* :hover и .active в папке components */
+.link {
+  color: var(--blue-l);
+  text-decoration: underline;
+
+  &-toggle {
+    display: inline-flex;
+    margin-top: 23px;
+    align-items: center;
+    color: var(--blue-l);
+
+    @media (--max767) {
+      margin-top: 10px;
+    }
+
+    span {
+
+      &:nth-of-type(2) { /* скрыть */
+        display: none;
+      }
+    }
+
+    .plus {
+
+      &:before,
+      &:after {
+        height: 11px;
+        background-color: var(--blue-l);
+      }
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  &-underline {
+    display: flex;
+    align-items: center;
+    color: var(--black-3);
+    text-decoration: underline;
+
+    svg {
+      width: 16px;
+      height: 18px;
+      margin-right: 10px;
+
+      * {
+        transition: fill .2s;
+      }
+    }
+  }
+  &-underline-d {
+    border-bottom: 1px dotted;
+    cursor: pointer;
+    transition: .2s;
+  }
+  &-more {
+    display: flex;
+    margin-top: 3px; /* ? */
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &--t { /* tablet */
+      display: none;
+
+      @media (--max1279) {
+        display: flex;
+      }
+    }
+
+    &--back {
+
+      svg {
+        margin-left: 0;
+        margin-right: 10px;
+        transform: rotate(180deg);
+      }
+    }
+
+    &--toggle {
+      margin-top: 10px;
+
+      span {
+
+        &:last-of-type {
+          display: none;
+        }
+      }
+
+      svg {
+        display: inline-block;
+        transform: rotate(90deg);
+      }
+    }
+
+    span { /* text */
+      color: var(--h-search-placeholder);
+      transition: color .2s;
+    }
+
+    svg { /* arrow */
+      width: 7px;
+      height: 11px;
+      margin-left: 7px;
+
+      * {
+        stroke: var(--h-search-placeholder);
+        transition: stroke .2s;
+      }
+    }
+  }
+  &-download {
+    display: flex;
+    align-items: center;
+    transition: color .2s;
+
+    svg {
+      margin-right: 10px;
+
+      * {
+        transition: fill .2s;
+      }
+    }
+  }
+}

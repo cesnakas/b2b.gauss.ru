@@ -1,0 +1,17 @@
+@import "../../variables.css";
+
+.b-filter {
+  &__title {
+    &:hover {
+      color: var(--orange-l);
+    }
+  }
+}
+
+.filter {
+  &__result-count {
+    &:hover {
+      background-color: var(--orange);
+    }
+  }
+}

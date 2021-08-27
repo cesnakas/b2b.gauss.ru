@@ -1,0 +1,63 @@
+:root {
+  --black:	#000000;
+  --black-text:	#232323; /* + #2E2E2E, + #1A1A1A, + #231F20 */
+  --black-1:	#6E6F70;
+  --black-2:	#9E9E9E;
+  --black-3:	#949BA8; /* + #9FA6B2, + #989898, + #A7AEBB */
+  --black-4:	#7D7D7D;
+  
+  --grey:	#E1E4E8;
+  --grey-1:	#CBD2DB; /* + #DBE3EB, + #DEE1E6, + #D1D7DF, + #DDDDE2 */
+  --grey-2:	#ECEEF1;
+  --grey-3:	#F0F2F3;
+  
+  --red: #FF2D2D;
+  --green: #40D24A;
+  
+  --orange: #F77B1D;
+  --orange-l: #F7971D;
+  
+  --blue: #5BCEFF;
+  --blue-l: #0DB9F9; /* + #0DB9F9 */
+  --blue-sale: #B2D8F6; /* ? */
+  
+  --border-main-about: #727272; /* + #7F7E7E */
+  
+  --shadow: 0 6px 10px rgba(46,47,77,.06);
+  
+  --gradient-color: rgba(224, 228, 232, 1);
+  --gradient-color-transparent: rgba(224, 228, 232, 0);
+  //--gradient-top: linear-gradient(to top, #E0E4E8, #ffffff);
+  //--gradient-bottom: linear-gradient(to bottom, #E0E4E8, #ffffff);
+  
+  /* ? */
+  --h-border: #E5E7EB;
+  --h-search-placeholder: #7F8A9E; /* оч много где */
+  --h-search-bg: #F1F3F4;
+  
+  --c-section-bg: #E6E8EB;
+  --c-section-border: #DDDDE2;
+  
+  --mask: rgba(35,31,32,.4);
+  
+  /* var */
+  
+  --aside-sidebar-width-d: 304px; /* ширина сайдбара десктоп */
+  --aside-sidebar-width-t: 190px;
+  
+  --aside-main-ml-d: 50px;
+  --aside-main-ml-t: 20px;
+  
+  --main-slider-small-d: 614px;
+  --main-slider-small-t: 360px;
+  
+  --section-mb-d: 37px; /* нижкий отступ до заголовка */
+  --section-mb-t: 20px;
+  
+  
+  --cart-padding-v-d: 25px; /* вертикальный отступ в корзине для элементов и total с фильтром */
+  --cart-padding-v-n: 20px;
+}
+
+
+

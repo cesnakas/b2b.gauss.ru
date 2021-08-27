@@ -1,0 +1,133 @@
+@import "../variables.css";
+@import "../media.css";
+
+.tooltip {
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+
+    svg {
+
+      .background {
+        fill: var(--orange-l);
+      }
+
+      .text {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    * {
+      pointer-events: none;
+    }
+  }
+
+  &__text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px);
+    width: 230px;
+    padding: 10px 15px;
+    border-radius: 2px;
+    background-color: var(--black);
+    color: #fff;
+    transform: translateY(-50%);
+    white-space: normal;
+    font-size: 14px;
+    font-weight: 400;
+    z-index: 2;
+
+    @media (--max767) {
+      top: inherit;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &.left {
+      left: inherit;
+      right: calc(100% + 10px);
+
+      &:after {
+        left: inherit;
+        right: 0;
+        transform: translateY(-50%) translateX(50%) rotate(45deg);
+      }
+    }
+
+    &.moved { /* если не помещается в экран и подвинуло скриптом */
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: var(--black);
+      transform: translateY(-50%) translateX(-50%) rotate(45deg);
+
+      @media (--max767) {
+        top: 100%;
+        left: 50%;
+      }
+    }
+  }
+
+  /* с бэка */
+  &__handle {
+    position: relative;
+
+    &-text {
+      display: none;
+      position: absolute;
+      bottom: 10px;
+      right: -50%;
+      width: 230px;
+      padding: 10px 15px !important;
+      border-radius: 2px;
+      background-color: var(--black);
+      font-size: 14px;
+      font-weight: 400;
+      color: #fff;
+      white-space: normal;
+      transform: translateY(-50%);
+      z-index: 2;
+
+      @media (--max767) {
+        right: 0;
+      }
+
+      &:after {
+        content: '';
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        bottom: -7px;
+        right: calc(50% - 3px);
+        background-color: #000000;
+        transform: translateY(-50%) translateX(50%) rotate(45deg);
+
+        @media (--max767) {
+          right: 50px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../variables.css";
+
+.order {
+
+  &-total {
+    &__pp {
+      a {
+        &:hover {
+          color: var(--black);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+.order-final { /* &.b-static-content */
+  
+  p {
+    font-size: 16px;
+  }
+}

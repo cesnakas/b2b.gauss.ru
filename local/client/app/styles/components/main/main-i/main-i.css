@@ -1,0 +1,42 @@
+@import "../../../variables.css";
+@import "../../../media.css";
+
+:root {
+  --ml-d: 24px;
+  --ml-t: 14px;
+}
+
+/* .main-info */
+.main-i {
+  display: flex;
+  margin-bottom: 162px;
+  margin-left: calc(var(--ml-d) * -1);
+  
+  @media (--max1700) {
+    margin-bottom: 80px;
+  }
+  @media (--max1279) {
+    margin-left: calc(var(--ml-t) * -1);
+  }
+  @media (--max1023) {
+    display: block;
+  }
+  @media (--max767) {
+    margin-bottom: var(--section-mb-t);
+  }
+  
+  & > div { /* .main-i-article, .main-i-news */
+    display: flex;
+    width: calc(50% - var(--ml-d));
+    margin-left: var(--ml-d);
+    flex-direction: column;
+    
+    @media (--max1279) {
+      width: calc(50% - var(--ml-t));
+      margin-left: var(--ml-t);
+    }
+    @media (--max1023) {
+      width: calc(100% - var(--ml-t));
+    }
+  }
+}

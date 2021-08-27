@@ -1,0 +1,42 @@
+@import '../variables.css';
+@import '../media.css';
+
+.scroll-top {
+  display: flex;
+  position: fixed;
+  right: 71px;
+  bottom: 120px;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--black);
+  opacity: 0;
+  transition: opacity .2s;
+  z-index: -2;
+  
+  @media (--max1700) {
+    right: 50px;
+  }
+  @media (--max1279) {
+    right: 15px;
+  }
+  @media (--max767) {
+    display: none;
+  }
+  
+  &.active {
+    opacity: 1;
+    cursor: pointer;
+    z-index: 99;
+  }
+  
+  svg {
+    width: 8px;
+    height: 20px;
+    
+    * {
+      transition: .1s .1s;
+    }
+  }
+}

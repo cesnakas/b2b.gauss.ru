@@ -1,0 +1,13 @@
+@import "../../variables.css";
+
+.h-menu {
+  &-d {
+    &__links {
+      a {
+        &:hover {
+          color: var(--orange-l);
+        }
+      }
+    }
+  }
+}

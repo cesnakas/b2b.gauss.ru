@@ -1,0 +1,58 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+.main-promo {
+  display: flex;
+  margin-bottom: var(--section-mb-d);
+  background-color: var(--black-text);
+  position: relative;
+
+  @media (--max767) {
+    margin-bottom: var(--section-mb-t);
+  }
+
+  &__img {
+    display: flex;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: translateY(-50%);
+
+    @media (--max1023) {
+      margin: 0 auto;
+      padding: 15px;
+      position: static;
+      transform: none;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+    @media (--max1023) {
+      display: none;
+    }
+  }
+
+  .title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .title-1 {
+    display: block;
+    margin-bottom: 25px;
+    color: var(--orange-l);
+  }
+  .btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}

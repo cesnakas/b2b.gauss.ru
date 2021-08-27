@@ -1,0 +1,80 @@
+@import "../variables.css";
+
+.b-form {
+
+  input:not(.b-count__input),
+  textarea {
+
+    &:hover[readonly] {
+      cursor: default;
+    }
+
+    &:hover:not(:disabled):not(:read-only) {
+      border-color: var(--grey-1);
+    }
+
+    &:focus:not(:read-only) {
+      background-color: #fff;
+      border-color: var(--grey-1);
+
+      &::placeholder {
+        color: var(--grey-1);
+      }
+
+      & ~ .b-form-suggest {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__pp {
+
+    a {
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__file {
+
+    &.error {
+
+      .btn {
+
+        &:hover {
+          border-color: var(--red);
+          background-color: var(--red);
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &-suggest {
+
+    li {
+
+      &:hover {
+        background-color: var(--grey-2);
+      }
+    }
+  }
+
+  &__show {
+
+    &:hover {
+      *:not(.interaction) {
+        fill: var(--orange);
+      }
+
+      .interaction {
+        stroke: var(--orange);
+      }
+    }
+  }
+  .ctrlvimage {
+    max-width: 500px;
+  }
+}

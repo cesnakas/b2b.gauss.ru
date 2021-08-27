@@ -1,0 +1,39 @@
+@import "../media.css";
+@import "../variables.css";
+
+.b-breadcrumbs {
+  display: flex;
+  margin-top: 7px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  
+  @media (--max1023) {
+    display: none;
+  }
+  
+  &__item {
+    display: inline-block;
+    font-size: 12px;
+    cursor: default;
+    
+    &::before {
+      content: '-';
+      margin: 0 3px;
+    }
+    &:first-of-type {
+      padding-left: 0;
+      
+      &::before {
+        display: none;
+      }
+    }
+    &:last-of-type {
+      color: var(--black-3);
+    }
+  }
+  
+  &__link {
+    color: var(--black);
+    transition: color .2s;
+  }
+}

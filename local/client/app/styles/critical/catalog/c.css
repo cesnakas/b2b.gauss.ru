@@ -1,0 +1,141 @@
+@import "../../variables.css";
+@import "../../helpers.css";
+@import "../../media.css";
+
+:root {
+  --search-btn-width-d: 60px;
+  --search-btn-width-t: 50px;
+}
+
+/* catalog */
+.c {
+
+  /* обертка хлебн крошек и ссылки на прайс листы */
+  &-top {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (--max1023) {
+      align-items: flex-start;
+    }
+
+    .link-download {
+      margin-left: auto;
+
+      @media (--max767) {
+        margin-bottom: 15px;
+      }
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .title {
+      width: 100%;
+
+      @media (--max1023) {
+        order: -1;
+        width: auto;
+      }
+    }
+  }
+  & .tooltip__text {
+    font-weight: 300;
+  }
+  &__bottom {
+    display: flex;
+    width: 100% !important;
+    flex-direction: column;
+    align-items: center;
+
+    @media (--max767) {
+      display: block;
+    }
+
+    .btn {
+      width: 100%;
+      margin-bottom: 10px;
+      white-space: normal;
+    }
+
+    .btn--loading {
+
+      svg * {
+        fill: var(--black);
+      }
+
+      span {
+        margin-right: 0;
+        color: var(--black);
+      }
+    }
+  }
+  & .basket-item__text {
+    font-size: 10px;
+  }
+  &__text {
+    margin-left: 20px;
+
+    @media (--max767) {
+      display: none;
+      margin-left: 0;
+      margin-top: 15px;
+    }
+
+    span {
+      color: var(--orange-l);
+    }
+  }
+
+  /* страница поиска */
+  &-search {
+    margin-bottom: 20px;
+    background-color: #fff;
+
+    @extend .search;
+  }
+
+  .b-breadcrumbs {
+    margin-top: 14px;
+    margin-bottom: 27px;
+  }
+
+  .aside__main > div > .btn--big,
+  &-search + div > .btn--big  {
+    display: none;
+  }
+
+  .red .tooltip__text {
+    padding: 10px;
+    text-align: center;
+  }
+
+  &__empty {
+    min-height: 50px;
+  }
+}
+.btn-add-box {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 6px;
+  white-space: nowrap;
+  font-size: 10px;
+  background-color: var(--blue);
+  color: #fff;
+  transition: .2s;
+
+  @media (--mobile) {
+    font-size: 9px!important;
+  }
+
+  &:hover {
+    background: var(--orange-l);
+  }
+
+  & > span {
+    margin: 0 0.25em;
+  }
+}

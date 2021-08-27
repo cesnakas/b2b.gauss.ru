@@ -1,0 +1,114 @@
+.title {
+  margin-bottom: 40px !important;
+  margin-top: 0 !important;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0 !important;
+  margin-bottom: 20px !important;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.title-1 {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.title-1[href]:hover,
+.title-1 a:hover,
+h1 a:hover {
+  color: var(--orange-l);
+}
+
+/* сам текст заголовка */
+.title-1 > span {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.title-2,
+h2 {
+  display: block;
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.title-2[href]:hover,
+.title-2 a:hover,
+h2 a:hover {
+  color: var(--orange-l);
+}
+
+.title-3,
+h3 {
+  display: block;
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.title-3[href]:hover,
+.title-3 a:hover,
+h3 a:hover {
+  color: var(--orange-l);
+}
+
+.title-4,
+h4 {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.styled-list ol,
+.styled-list ul {
+  margin-bottom: 20px;
+}
+
+.styled-list li {
+  font-size: 16px;
+}
+
+.styled-list li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.styled-list ol {
+  counter-reset: li;
+}
+
+.styled-list ol li {
+  position: relative;
+  list-style-type: none;
+}
+
+.styled-list ol li:before {
+  counter-increment: li;
+  content: counters(li,'')'.';
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.styled-list ul {
+  list-style-type: none;
+}
+
+.styled-list ul li:before {
+  counter-increment: none;
+  content: '>';
+  margin-right: 15px;
+  font-weight: 500;
+}

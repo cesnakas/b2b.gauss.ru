@@ -1,0 +1,27 @@
+.sort {
+    white-space: nowrap;
+}
+
+.sort select {
+    width: auto;
+}
+
+.sort .select-wrapper {
+    display: inline-block;
+}
+
+.panel-control > div {
+    width: 40%;
+    margin-right: 20px;
+}
+
+@media (max-width: 950px) {
+    .panel-control > div {
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .sort {
+        white-space: normal;
+    }
+}

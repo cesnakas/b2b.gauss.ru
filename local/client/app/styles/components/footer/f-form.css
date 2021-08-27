@@ -1,0 +1,43 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+.f-form { /* форма над футером */
+  min-height: 540px;
+  position: relative;
+  //padding-bottom: 20px;
+
+  @media (--max1023) {
+    height: auto;
+    min-height: initial;
+    padding-bottom: 60px;
+  }
+  
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    
+    @media (--max767) {
+      display: none;
+    }
+
+    & > div {
+      display: flex;
+    }
+  }
+  
+  .b-form {
+    position: relative;
+    z-index: 2;
+
+    &__bottom {
+      align-items: flex-start;
+
+      .btn {
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+    }
+  }
+}

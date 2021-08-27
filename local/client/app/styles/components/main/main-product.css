@@ -1,0 +1,36 @@
+@import "../../variables.css";
+@import "../../media.css";
+@import "../../helpers.css";
+
+:root {
+  --ml-d: 10px;
+  
+  --slide-width-m: 270px;
+  --slide-margin-m: 10px;
+}
+
+.main-product {
+  display: flex;
+  margin-bottom: var(--section-mb-d);
+  margin-left: calc(var(--ml-d) * -1);
+  
+  @media (--max767) {
+    margin: 0 -15px var(--section-mb-t);
+  }
+  
+  .p {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper {
+    
+    &-slide {
+      @extend .slide-pseudo-padding;
+
+      &:hover {
+        z-index: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+:root {
+  --firstStep: 1030px;
+  --secondStep: 1601px;
+  --thirdStep: 2072px;
+}
+
+.main {
+  padding-top: 20px;
+  padding-bottom: 95px;
+  background-color: var(--grey-3);
+  position: relative;
+  overflow: hidden;
+  
+  @media (--max1279) {
+    padding-bottom: 50px;
+  }
+  @media (--max767) {
+    padding-bottom: 20px;
+  }
+  
+  /* О компании */
+  &--about {
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    & > .container {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+  
+  &--gradient {
+    background: linear-gradient(to bottom, var(--gradient-color) 0px, var(--gradient-color-transparent) var(--firstStep), var(--gradient-color-transparent) var(--firstStep), var(--gradient-color) var(--secondStep), var(--gradient-color-transparent) var(--thirdStep)) no-repeat;
+  }
+  
+  &--gradient-s {
+    background: linear-gradient(to bottom, var(--gradient-color) 0px, var(--gradient-color-transparent) var(--firstStep)) no-repeat;
+  }
+  
+  &--nopb {
+    padding-bottom: 0;
+  }
+}

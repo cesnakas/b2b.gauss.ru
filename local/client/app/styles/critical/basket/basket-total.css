@@ -1,0 +1,150 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+
+.basket-total {
+  flex-grow: 1;
+  padding: 25px var(--cart-padding-v-d) 25px 0;
+
+  @media (--max1279) {
+    flex-grow: 1;
+    padding: 15px var(--cart-padding-v-n);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+
+    @media (--mobile) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: space-between;
+
+    @media(--max1279) {
+      width: auto;
+      max-width: 450px;
+      margin-left: 0;
+    }
+    @media(--max1023) {
+      max-width: 100%;
+      justify-content: flex-start;
+    }
+
+    &__bottom {
+      margin-top: 10px;
+    }
+  }
+
+  &__info {
+    margin-left: auto;
+
+    @media (--max1279) {
+      margin-left: 0;
+      margin-right: auto;
+    }
+    @media (--max767) {
+      order: -2;
+      width: 50%;
+      margin-left: 0;
+    }
+    @media (--mobile) {
+      width: 100%;
+    }
+  }
+
+  &__sum {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+
+    @media (--max767) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &--small { /* доп строки помимо "итого" */
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--black-3);
+    }
+
+    &--available {
+
+      span:last-child {
+        color: var(--green);
+      }
+    }
+
+    &--not-available {
+
+      span:last-child {
+        color: var(--red);
+      }
+    }
+
+    .total-price__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    span {
+
+      &:first-child { /* заголовок в ценах */
+        width: 100px;
+        margin-right: 20px;
+        white-space: nowrap;
+
+        @media (--max1279) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .discount_price {
+    color: red;
+  }
+
+  .btn {
+    width: 188px;
+    margin-left: 87px;
+    align-self: stretch;
+
+    @media (--max1700) {
+      margin-left: 50px;
+    }
+    @media (--max1279) {
+      margin-left: 20px;
+    }
+    @media (--mobile) {
+      margin-left: 0;
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    &.basket-total__submit {
+      align-self: center;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

@@ -1,0 +1,428 @@
+@import "./variables.css";
+@import "./media.css";
+@import "./manager_lk.css";
+
+* {
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+html {
+  height: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+
+  &.locked {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: "EtelkaPro", 'Arial';
+  color: var(--black-text);
+  font-weight: 300;
+  line-height: 1.5;
+  position: relative;
+}
+
+.container {
+  max-width: 1760px;
+  margin: auto;
+  padding: 0 50px;
+  box-sizing: content-box;
+
+  @media (--max1279) {
+    padding: 0 15px;
+  }
+}
+
+form {
+  margin-bottom: 0;
+}
+font.notetext {
+  color: var(--green) !important;
+}
+font.errortext {
+  color: var(--red) !important;
+}
+
+p {
+  display: block;
+  margin: 0 0 25px;
+  font-size: 15px;
+  line-height: 1.6;
+
+  @media (--max767) {
+    margin: 0 0 15px;
+    font-size: 14px;
+  }
+
+  /*&:not(:last-child) {
+    margin: 0 0 25px;
+
+    @media (--max767) {
+      margin: 0 0 15px;
+    }
+  }*/
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  display: inline;
+  color: inherit;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.clearfix {
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+button {
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  background: transparent;
+}
+
+input {
+  border-radius: 0;
+}
+input::-ms-clear {
+  display: none;
+}
+
+/*iOS input top shadow fix*/
+textarea,
+input:matches(
+  [type="email"],
+  [type="number"],
+  [type="password"],
+  [type="search"],
+  [type="tel"],
+  [type="text"],
+  [type="url"]
+) {
+  appearance: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.loading {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.i-icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.lazy {
+
+  &.init:not(.lazy--replace) {
+    animation-name: fadeIn;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+  }
+}
+
+
+[data-f-item].init {
+
+  .b-form__label {
+    opacity: 1;
+  }
+}
+
+[data-fix-item] {
+
+  &.scroll {
+    position: fixed;
+  }
+}
+
+[data-show-more] {
+  overflow: hidden;
+}
+
+[data-m-menu-btn] * {
+  pointer-events: none;
+}
+
+[data-fix-sidebar] {
+
+  &.active { /* order page lock on scroll */
+    display: flex !important;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    [data-fix-item] {
+      position: static !important;
+    }
+  }
+
+  [data-fix-item] {
+    width: inherit;
+
+    &.scroll {
+      position: fixed;
+    }
+  }
+}
+
+[data-split] span {
+  display: block;
+
+  &:nth-of-type(1) {
+    animation-delay: .1s;
+  }
+  &:nth-of-type(2) {
+    animation-delay: .2s;
+  }
+  &:nth-of-type(3) {
+    animation-delay: .3s;
+  }
+  &:nth-of-type(4) {
+    animation-delay: .4s;
+  }
+  &:nth-of-type(5) {
+    animation-delay: .5s;
+  }
+  &:nth-of-type(6) {
+    animation-delay: .6s;
+  }
+  &:nth-of-type(7) {
+    animation-delay: .7s;
+  }
+}
+
+.red {
+  color: var(--red);
+}
+
+#bx-panel {
+  height: 0;
+}
+
+
+/* Страница стилей */
+.styles {
+  min-width: 1300px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+
+  &__item {
+    position: relative;
+    margin-bottom: 10px;
+
+    &--margin-top {
+      margin-top: 10px;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    right: calc(100% + 30px);
+    top: 0;
+    color: var(--black);
+    text-align: right;
+    white-space: nowrap;
+
+    &:after {
+      content: ':';
+      display: inline-block;
+    }
+  }
+
+  &__products {
+    display: flex;
+    width: calc(334px * 2 + 10px * 2);
+    margin-left: -10px;
+
+    & > .p {
+      width: calc(50% - 10px);
+      margin-left: 10px;
+    }
+  }
+}
+
+.select-items ul> li.highlighted:hover {
+  background-color: #ECEEF1;
+}
+.select-items ul> li.highlighted {
+  background-color: #fff;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* всю стилизацию для ие описывать здесь */
+.bx-ie {
+
+  .select {
+    display: block;
+
+    & > .label {
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+  }
+
+  .lk-aside-sidebar {
+    min-height: 100vh;
+  }
+
+  .s-toggle__title {
+    display: block;
+  }
+
+  .b-form-suggest {
+    opacity: 1;
+  }
+
+  .c-t__item .tag {
+    writing-mode: vertical-rl;
+  }
+
+  .h__cart {
+    overflow: hidden;
+  }
+
+  .h-user {
+    margin-left: 70px;
+  }
+
+  .sale-item {
+    background-size: 23px;
+  }
+
+  .f-subscribe__form .b-form__label {
+    top: 17px;
+
+    &.active {
+      top: 8px;
+    }
+  }
+
+  table tr:first-child {
+    font-weight: bold;
+  }
+}
+
+/* предзагружаемые стили */
+[data-modal] {  /* блокировка ссылок до инициализации */
+  pointer-events: none;
+}
+select {
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  border: none;
+  font-weight: 100;
+
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+}
+.tooltip__text {
+  display: none;
+}
+.b-filter {
+
+  @media (--max1023) {
+    display: none;
+  }
+}
+.svg-nofill {
+  fill: transparent !important;
+}
+.svg-nostroke {
+  stroke: transparent !important;
+}
+
+.datepicker.active {
+  z-index: 99999;
+  position: relative !important;
+}
+
+.ed__links a img {
+  width: 100%;
+  display: block;
+}
+
+.b-modal__text {
+  color: black;
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 15px;
+  span{
+     font-weight: 600;
+     text-align: center;
+  }
+}
+
+.ed__links a {
+  width: calc(25% - 5px);
+  display: inline-block;
+}
+
+@media (max-width: 1700px) {
+  .ed__links a {
+    width: calc(33.3% - 5px);
+  }
+}
+@media (max-width: 1700px) {
+  .ed__links a {
+    width: calc(33.3% - 5px);
+  }
+}
+@media (max-width: 578px) {
+  .ed__links a {
+    width: calc(49% - 5px);
+  }
+}
+
+@media (max-width: 500px) {
+  .b-modal__text {
+    margin: 20px 10px ;
+  }
+}
+ 
+.img-fast-order {
+  display: block;
+  margin: 10px auto 0;
+
+}

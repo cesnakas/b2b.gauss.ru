@@ -1,0 +1,14 @@
+@import "../../variables.css";
+
+.lk-carts {
+  &__del {
+    &:hover #tooltip-question-Path_56 {
+      fill: #fff !important;
+    }
+  }
+  .btn {
+    &:hover #tooltip-question-Path_56 {
+      fill: var(--orange-l) !important;
+    }
+  }
+}

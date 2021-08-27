@@ -1,0 +1,15 @@
+@import "../variables.css";
+
+.b-count {
+
+  &__btn {
+
+    &:hover {
+
+      &:before,
+      &:after {
+        background-color: var(--orange-l);
+      }
+    }
+  }
+}

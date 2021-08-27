@@ -1,0 +1,14 @@
+@import "../variables.css";
+
+.b-sorting {
+
+  &__display {
+
+    &:hover {
+
+      svg * {
+        fill: var(--black-1);
+      }
+    }
+  }
+}

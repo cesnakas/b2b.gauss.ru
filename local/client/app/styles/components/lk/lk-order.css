@@ -1,0 +1,12 @@
+@import "../../variables.css";
+@import "../../media.css";
+
+.lk-order {
+  &-i {
+    &__link[download] {
+      &:hover {
+        color: var(--orange-l);
+      }
+    }
+  }
+}

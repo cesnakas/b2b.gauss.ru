@@ -1,1 +1,2 @@
-# b2b.gauss.ru
+## Основной репозиторий проекта gaussb2b.ru
+## [Readme по сайту здесь](/local/docs/README.md)

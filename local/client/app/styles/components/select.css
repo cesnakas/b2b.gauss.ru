@@ -1,0 +1,38 @@
+@import "../variables.css";
+
+.select {
+
+  &:hover {
+    border-color: var(--grey-1);
+  }
+
+  &-items {
+
+    ul > * {
+      &.selected,
+      &:hover {
+        background-color: var(--grey-2);
+      }
+    }
+  }
+
+  &-scroll {
+
+    &:hover {
+
+      .ps__rail-y {
+        opacity: 1;
+      }
+    }
+
+    .ps__rail-y {
+
+      .ps__thumb-y {
+
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
